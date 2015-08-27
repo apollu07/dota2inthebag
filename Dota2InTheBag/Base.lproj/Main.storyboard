@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -85,16 +86,16 @@
                                 <exclude reference="rW5-mE-Fls"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Bzq-KQ-d7L"/>
-                                <exclude reference="iZw-Sn-iat"/>
-                                <exclude reference="4GP-Ts-8bj"/>
-                                <exclude reference="Zhg-6Y-ZcZ"/>
-                                <exclude reference="UC9-0z-GJt"/>
-                                <exclude reference="p47-en-XDK"/>
                                 <exclude reference="51C-Wh-HSZ"/>
                                 <exclude reference="QhX-ka-kwn"/>
+                                <exclude reference="UC9-0z-GJt"/>
+                                <exclude reference="p47-en-XDK"/>
+                                <exclude reference="4GP-Ts-8bj"/>
+                                <exclude reference="Zhg-6Y-ZcZ"/>
                                 <exclude reference="qVf-P2-AOO"/>
                                 <exclude reference="va5-nj-slr"/>
+                                <exclude reference="Bzq-KQ-d7L"/>
+                                <exclude reference="iZw-Sn-iat"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -105,16 +106,16 @@
                                 <include reference="rW5-mE-Fls"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Bzq-KQ-d7L"/>
-                                <include reference="iZw-Sn-iat"/>
-                                <include reference="4GP-Ts-8bj"/>
-                                <include reference="Zhg-6Y-ZcZ"/>
-                                <include reference="UC9-0z-GJt"/>
-                                <include reference="p47-en-XDK"/>
                                 <include reference="51C-Wh-HSZ"/>
                                 <include reference="QhX-ka-kwn"/>
+                                <include reference="UC9-0z-GJt"/>
+                                <include reference="p47-en-XDK"/>
+                                <include reference="4GP-Ts-8bj"/>
+                                <include reference="Zhg-6Y-ZcZ"/>
                                 <include reference="qVf-P2-AOO"/>
                                 <include reference="va5-nj-slr"/>
+                                <include reference="Bzq-KQ-d7L"/>
+                                <include reference="iZw-Sn-iat"/>
                             </mask>
                         </variation>
                     </view>
@@ -132,6 +133,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rOy-cg-7eI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="984-gw-sHg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGh-rf-ufc">
@@ -154,8 +156,8 @@
                                 <exclude reference="qGh-rf-ufc"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="325-hH-Ko4"/>
                                 <exclude reference="6bx-ee-CtN"/>
+                                <exclude reference="325-hH-Ko4"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -163,8 +165,8 @@
                                 <include reference="qGh-rf-ufc"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="325-hH-Ko4"/>
                                 <include reference="6bx-ee-CtN"/>
+                                <include reference="325-hH-Ko4"/>
                             </mask>
                         </variation>
                     </view>
