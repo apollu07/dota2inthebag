@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Match Level View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MatchLevelViewController" customModule="Dota2InTheBag" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,7 +15,105 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Match Level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkP-KI-iWv">
+                                <rect key="frame" x="253" y="28" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJI-Kn-s8g">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Normal Skill">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ce-cT-6YE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Medium Skill">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2O-Pa-IRJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="High Skill">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JB-ic-gRl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Very High Skill">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW5-mE-Fls">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="I Don't Know">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="qJI-Kn-s8g" secondAttribute="centerX" id="4GP-Ts-8bj"/>
+                            <constraint firstAttribute="centerX" secondItem="5JB-ic-gRl" secondAttribute="centerX" id="51C-Wh-HSZ"/>
+                            <constraint firstAttribute="centerX" secondItem="4ce-cT-6YE" secondAttribute="centerX" id="BbY-RJ-X7w"/>
+                            <constraint firstItem="DkP-KI-iWv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="15" id="Bzq-KQ-d7L"/>
+                            <constraint firstItem="4ce-cT-6YE" firstAttribute="top" secondItem="qJI-Kn-s8g" secondAttribute="bottom" constant="50" id="KkA-ad-DoR"/>
+                            <constraint firstItem="5JB-ic-gRl" firstAttribute="top" secondItem="D2O-Pa-IRJ" secondAttribute="bottom" constant="50" id="QhX-ka-kwn"/>
+                            <constraint firstAttribute="centerX" secondItem="D2O-Pa-IRJ" secondAttribute="centerX" id="UC9-0z-GJt"/>
+                            <constraint firstItem="D2O-Pa-IRJ" firstAttribute="top" secondItem="4ce-cT-6YE" secondAttribute="bottom" constant="50" id="XsO-ix-jfR"/>
+                            <constraint firstItem="qJI-Kn-s8g" firstAttribute="top" secondItem="DkP-KI-iWv" secondAttribute="bottom" constant="73" id="Zhg-6Y-ZcZ"/>
+                            <constraint firstAttribute="centerX" secondItem="DkP-KI-iWv" secondAttribute="centerX" id="iZw-Sn-iat"/>
+                            <constraint firstItem="rW5-mE-Fls" firstAttribute="top" secondItem="5JB-ic-gRl" secondAttribute="bottom" constant="50" id="qVf-P2-AOO"/>
+                            <constraint firstAttribute="centerX" secondItem="rW5-mE-Fls" secondAttribute="centerX" id="va5-nj-slr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qJI-Kn-s8g"/>
+                                <exclude reference="4ce-cT-6YE"/>
+                                <exclude reference="D2O-Pa-IRJ"/>
+                                <exclude reference="5JB-ic-gRl"/>
+                                <exclude reference="rW5-mE-Fls"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Bzq-KQ-d7L"/>
+                                <exclude reference="iZw-Sn-iat"/>
+                                <exclude reference="4GP-Ts-8bj"/>
+                                <exclude reference="Zhg-6Y-ZcZ"/>
+                                <exclude reference="BbY-RJ-X7w"/>
+                                <exclude reference="KkA-ad-DoR"/>
+                                <exclude reference="UC9-0z-GJt"/>
+                                <exclude reference="XsO-ix-jfR"/>
+                                <exclude reference="51C-Wh-HSZ"/>
+                                <exclude reference="QhX-ka-kwn"/>
+                                <exclude reference="qVf-P2-AOO"/>
+                                <exclude reference="va5-nj-slr"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qJI-Kn-s8g"/>
+                                <include reference="4ce-cT-6YE"/>
+                                <include reference="D2O-Pa-IRJ"/>
+                                <include reference="5JB-ic-gRl"/>
+                                <include reference="rW5-mE-Fls"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Bzq-KQ-d7L"/>
+                                <include reference="iZw-Sn-iat"/>
+                                <include reference="4GP-Ts-8bj"/>
+                                <include reference="Zhg-6Y-ZcZ"/>
+                                <include reference="BbY-RJ-X7w"/>
+                                <include reference="KkA-ad-DoR"/>
+                                <include reference="UC9-0z-GJt"/>
+                                <include reference="XsO-ix-jfR"/>
+                                <include reference="51C-Wh-HSZ"/>
+                                <include reference="QhX-ka-kwn"/>
+                                <include reference="qVf-P2-AOO"/>
+                                <include reference="va5-nj-slr"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

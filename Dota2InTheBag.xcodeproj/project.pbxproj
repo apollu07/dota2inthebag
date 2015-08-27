@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0097191B8ED4DD00B129A6 /* MatchLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */; };
 		AFA3104C1B8C21AE001F136D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3104B1B8C21AE001F136D /* AppDelegate.swift */; };
 		AFA3104F1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFA3104D1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld */; };
-		AFA310511B8C21AE001F136D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA310501B8C21AE001F136D /* ViewController.swift */; };
 		AFA310541B8C21AE001F136D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA310521B8C21AE001F136D /* Main.storyboard */; };
 		AFA310561B8C21AE001F136D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA310551B8C21AE001F136D /* Images.xcassets */; };
 		AFA310591B8C21AE001F136D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA310571B8C21AE001F136D /* LaunchScreen.xib */; };
@@ -27,11 +27,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchLevelViewController.swift; sourceTree = "<group>"; };
 		AFA310461B8C21AE001F136D /* Dota2InTheBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2InTheBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA3104A1B8C21AE001F136D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFA3104B1B8C21AE001F136D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA3104E1B8C21AE001F136D /* Dota2InTheBag.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dota2InTheBag.xcdatamodel; sourceTree = "<group>"; };
-		AFA310501B8C21AE001F136D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AFA310531B8C21AE001F136D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFA310551B8C21AE001F136D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AFA310581B8C21AE001F136D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -80,12 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				AFA3104B1B8C21AE001F136D /* AppDelegate.swift */,
-				AFA310501B8C21AE001F136D /* ViewController.swift */,
 				AFA310521B8C21AE001F136D /* Main.storyboard */,
 				AFA310551B8C21AE001F136D /* Images.xcassets */,
 				AFA310571B8C21AE001F136D /* LaunchScreen.xib */,
 				AFA3104D1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld */,
 				AFA310491B8C21AE001F136D /* Supporting Files */,
+				AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */,
 			);
 			path = Dota2InTheBag;
 			sourceTree = "<group>";
@@ -215,8 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFA310511B8C21AE001F136D /* ViewController.swift in Sources */,
 				AFA3104F1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld in Sources */,
+				AF0097191B8ED4DD00B129A6 /* MatchLevelViewController.swift in Sources */,
 				AFA3104C1B8C21AE001F136D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +413,7 @@
 				AFA3106A1B8C21AE001F136D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFA3106B1B8C21AE001F136D /* Build configuration list for PBXNativeTarget "Dota2InTheBagTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +422,7 @@
 				AFA3106D1B8C21AE001F136D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
