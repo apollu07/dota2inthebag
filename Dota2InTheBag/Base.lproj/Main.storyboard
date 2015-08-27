@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Match Level View Controller-->
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Match Level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkP-KI-iWv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Match Level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkP-KI-iWv">
                                 <rect key="frame" x="253" y="28" width="94" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -27,51 +28,58 @@
                                 <state key="normal" title="Normal Skill">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ce-cT-6YE">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Medium Skill">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <connections>
+                                    <action selector="normalSkillSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EVW-n3-JHV"/>
+                                    <segue destination="ef6-Oo-i4v" kind="show" id="RCn-jQ-xKm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2O-Pa-IRJ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="High Skill">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="highSkillSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yL6-Op-cE4"/>
+                                    <segue destination="ef6-Oo-i4v" kind="show" id="tYv-pZ-hhb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JB-ic-gRl">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Very High Skill">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="veryHighSkillSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DWm-bw-5X5"/>
+                                    <segue destination="ef6-Oo-i4v" kind="show" id="jRd-Le-ylr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW5-mE-Fls">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="I Don't Know">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="iDontKnowSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VX9-ul-Q2L"/>
+                                    <segue destination="ef6-Oo-i4v" kind="show" id="jCB-wf-Dma"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="qJI-Kn-s8g" secondAttribute="centerX" id="4GP-Ts-8bj"/>
                             <constraint firstAttribute="centerX" secondItem="5JB-ic-gRl" secondAttribute="centerX" id="51C-Wh-HSZ"/>
-                            <constraint firstAttribute="centerX" secondItem="4ce-cT-6YE" secondAttribute="centerX" id="BbY-RJ-X7w"/>
                             <constraint firstItem="DkP-KI-iWv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="15" id="Bzq-KQ-d7L"/>
-                            <constraint firstItem="4ce-cT-6YE" firstAttribute="top" secondItem="qJI-Kn-s8g" secondAttribute="bottom" constant="50" id="KkA-ad-DoR"/>
                             <constraint firstItem="5JB-ic-gRl" firstAttribute="top" secondItem="D2O-Pa-IRJ" secondAttribute="bottom" constant="50" id="QhX-ka-kwn"/>
                             <constraint firstAttribute="centerX" secondItem="D2O-Pa-IRJ" secondAttribute="centerX" id="UC9-0z-GJt"/>
-                            <constraint firstItem="D2O-Pa-IRJ" firstAttribute="top" secondItem="4ce-cT-6YE" secondAttribute="bottom" constant="50" id="XsO-ix-jfR"/>
                             <constraint firstItem="qJI-Kn-s8g" firstAttribute="top" secondItem="DkP-KI-iWv" secondAttribute="bottom" constant="73" id="Zhg-6Y-ZcZ"/>
                             <constraint firstAttribute="centerX" secondItem="DkP-KI-iWv" secondAttribute="centerX" id="iZw-Sn-iat"/>
+                            <constraint firstItem="D2O-Pa-IRJ" firstAttribute="top" secondItem="qJI-Kn-s8g" secondAttribute="bottom" constant="50" id="p47-en-XDK"/>
                             <constraint firstItem="rW5-mE-Fls" firstAttribute="top" secondItem="5JB-ic-gRl" secondAttribute="bottom" constant="50" id="qVf-P2-AOO"/>
                             <constraint firstAttribute="centerX" secondItem="rW5-mE-Fls" secondAttribute="centerX" id="va5-nj-slr"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="qJI-Kn-s8g"/>
-                                <exclude reference="4ce-cT-6YE"/>
                                 <exclude reference="D2O-Pa-IRJ"/>
                                 <exclude reference="5JB-ic-gRl"/>
                                 <exclude reference="rW5-mE-Fls"/>
@@ -81,10 +89,8 @@
                                 <exclude reference="iZw-Sn-iat"/>
                                 <exclude reference="4GP-Ts-8bj"/>
                                 <exclude reference="Zhg-6Y-ZcZ"/>
-                                <exclude reference="BbY-RJ-X7w"/>
-                                <exclude reference="KkA-ad-DoR"/>
                                 <exclude reference="UC9-0z-GJt"/>
-                                <exclude reference="XsO-ix-jfR"/>
+                                <exclude reference="p47-en-XDK"/>
                                 <exclude reference="51C-Wh-HSZ"/>
                                 <exclude reference="QhX-ka-kwn"/>
                                 <exclude reference="qVf-P2-AOO"/>
@@ -94,7 +100,6 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="qJI-Kn-s8g"/>
-                                <include reference="4ce-cT-6YE"/>
                                 <include reference="D2O-Pa-IRJ"/>
                                 <include reference="5JB-ic-gRl"/>
                                 <include reference="rW5-mE-Fls"/>
@@ -104,10 +109,8 @@
                                 <include reference="iZw-Sn-iat"/>
                                 <include reference="4GP-Ts-8bj"/>
                                 <include reference="Zhg-6Y-ZcZ"/>
-                                <include reference="BbY-RJ-X7w"/>
-                                <include reference="KkA-ad-DoR"/>
                                 <include reference="UC9-0z-GJt"/>
-                                <include reference="XsO-ix-jfR"/>
+                                <include reference="p47-en-XDK"/>
                                 <include reference="51C-Wh-HSZ"/>
                                 <include reference="QhX-ka-kwn"/>
                                 <include reference="qVf-P2-AOO"/>
@@ -118,6 +121,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="63" y="313.5"/>
+        </scene>
+        <!--Lineup View Controller-->
+        <scene sceneID="95f-IA-amS">
+            <objects>
+                <viewController id="ef6-Oo-i4v" customClass="LineupViewController" customModule="Dota2InTheBag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S7v-qT-4q4"/>
+                        <viewControllerLayoutGuide type="bottom" id="rOy-cg-7eI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="984-gw-sHg">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGh-rf-ufc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fHQ-iK-cle" kind="unwind" unwindAction="returned:" id="is4-aV-qlT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qGh-rf-ufc" firstAttribute="leading" secondItem="984-gw-sHg" secondAttribute="leadingMargin" id="325-hH-Ko4"/>
+                            <constraint firstItem="rOy-cg-7eI" firstAttribute="top" secondItem="qGh-rf-ufc" secondAttribute="bottom" constant="20" id="6bx-ee-CtN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qGh-rf-ufc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="325-hH-Ko4"/>
+                                <exclude reference="6bx-ee-CtN"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qGh-rf-ufc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="325-hH-Ko4"/>
+                                <include reference="6bx-ee-CtN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwD-Qs-sW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fHQ-iK-cle" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="787.5" y="313.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tYv-pZ-hhb"/>
+    </inferredMetricsTieBreakers>
 </document>

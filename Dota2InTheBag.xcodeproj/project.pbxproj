@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF0097191B8ED4DD00B129A6 /* MatchLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */; };
+		AF8021641B8F812100BDD529 /* LineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8021631B8F812100BDD529 /* LineupViewController.swift */; };
 		AFA3104C1B8C21AE001F136D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3104B1B8C21AE001F136D /* AppDelegate.swift */; };
 		AFA3104F1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFA3104D1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld */; };
 		AFA310541B8C21AE001F136D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA310521B8C21AE001F136D /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchLevelViewController.swift; sourceTree = "<group>"; };
+		AF8021631B8F812100BDD529 /* LineupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineupViewController.swift; sourceTree = "<group>"; };
 		AFA310461B8C21AE001F136D /* Dota2InTheBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2InTheBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA3104A1B8C21AE001F136D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFA3104B1B8C21AE001F136D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				AFA3104D1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld */,
 				AFA310491B8C21AE001F136D /* Supporting Files */,
 				AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */,
+				AF8021631B8F812100BDD529 /* LineupViewController.swift */,
 			);
 			path = Dota2InTheBag;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA3104F1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld in Sources */,
+				AF8021641B8F812100BDD529 /* LineupViewController.swift in Sources */,
 				AF0097191B8ED4DD00B129A6 /* MatchLevelViewController.swift in Sources */,
 				AFA3104C1B8C21AE001F136D /* AppDelegate.swift in Sources */,
 			);

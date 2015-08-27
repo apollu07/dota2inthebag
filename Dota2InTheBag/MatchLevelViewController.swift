@@ -9,6 +9,12 @@
 import UIKit
 
 class MatchLevelViewController: UIViewController {
+    
+    enum MatchLevel: Int {
+        case Unknown = 0, NormalSkill, HighSkill, VeryHighSkill
+    }
+    
+    var matchLevel: MatchLevel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +27,32 @@ class MatchLevelViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func normalSkillSelected(sender: AnyObject) {
+        matchLevel = .NormalSkill
     }
-    */
 
+    @IBAction func highSkillSelected(sender: AnyObject) {
+        matchLevel = .HighSkill
+    }
+    
+    @IBAction func veryHighSkillSelected(sender: AnyObject) {
+        matchLevel = .VeryHighSkill
+    }
+    
+    @IBAction func iDontKnowSelected(sender: AnyObject) {
+        matchLevel = .Unknown
+    }
+    
+    @IBAction func returned(segue: UIStoryboardSegue) {
+        println("returned from Lineup page.")
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destination = segue.destinationViewController as! LineupViewController
+        if let curMatchLevel = matchLevel {
+            destination.matchLevel = curMatchLevel
+        } else {
+            destination.matchLevel = .Unknown
+        }
+    }
 }
