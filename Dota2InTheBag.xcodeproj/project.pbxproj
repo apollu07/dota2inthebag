@@ -15,6 +15,7 @@
 		AFA310561B8C21AE001F136D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA310551B8C21AE001F136D /* Images.xcassets */; };
 		AFA310591B8C21AE001F136D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA310571B8C21AE001F136D /* LaunchScreen.xib */; };
 		AFA310651B8C21AE001F136D /* Dota2InTheBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA310641B8C21AE001F136D /* Dota2InTheBagTests.swift */; };
+		AFCFFA3B1B90254A00E3F69A /* sven_full.png in Resources */ = {isa = PBXBuildFile; fileRef = AFCFFA3A1B90254A00E3F69A /* sven_full.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		AFA3105E1B8C21AE001F136D /* Dota2InTheBagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dota2InTheBagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA310631B8C21AE001F136D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFA310641B8C21AE001F136D /* Dota2InTheBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2InTheBagTests.swift; sourceTree = "<group>"; };
+		AFCFFA3A1B90254A00E3F69A /* sven_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sven_full.png; path = ../../../../Desktop/sven_full.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		AFA310491B8C21AE001F136D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AFCFFA3A1B90254A00E3F69A /* sven_full.png */,
 				AFA3104A1B8C21AE001F136D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -200,6 +203,7 @@
 			files = (
 				AFA310541B8C21AE001F136D /* Main.storyboard in Resources */,
 				AFA310591B8C21AE001F136D /* LaunchScreen.xib in Resources */,
+				AFCFFA3B1B90254A00E3F69A /* sven_full.png in Resources */,
 				AFA310561B8C21AE001F136D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
