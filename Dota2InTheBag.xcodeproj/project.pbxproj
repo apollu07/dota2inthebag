@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF0097191B8ED4DD00B129A6 /* MatchLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */; };
+		AF70EADE1B929A35003FCD33 /* add_hero.png in Resources */ = {isa = PBXBuildFile; fileRef = AF70EADD1B929A35003FCD33 /* add_hero.png */; };
 		AF8021641B8F812100BDD529 /* LineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8021631B8F812100BDD529 /* LineupViewController.swift */; };
 		AFA3104C1B8C21AE001F136D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3104B1B8C21AE001F136D /* AppDelegate.swift */; };
 		AFA3104F1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFA3104D1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchLevelViewController.swift; sourceTree = "<group>"; };
+		AF70EADD1B929A35003FCD33 /* add_hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_hero.png; sourceTree = "<group>"; };
 		AF8021631B8F812100BDD529 /* LineupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineupViewController.swift; sourceTree = "<group>"; };
 		AFA310461B8C21AE001F136D /* Dota2InTheBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2InTheBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA3104A1B8C21AE001F136D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				AFCFFA3C1B90E0C100E3F69A /* puck_full.png */,
+				AF70EADD1B929A35003FCD33 /* add_hero.png */,
 				AFA3104A1B8C21AE001F136D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -204,6 +207,7 @@
 				AFA310541B8C21AE001F136D /* Main.storyboard in Resources */,
 				AFCFFA3D1B90E0C100E3F69A /* puck_full.png in Resources */,
 				AFA310591B8C21AE001F136D /* LaunchScreen.xib in Resources */,
+				AF70EADE1B929A35003FCD33 /* add_hero.png in Resources */,
 				AFA310561B8C21AE001F136D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

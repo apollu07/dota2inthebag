@@ -140,31 +140,46 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf0-Se-nbf">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" backgroundImage="puck_full.png"/>
+                                        <state key="normal" backgroundImage="add_hero.png"/>
+                                        <connections>
+                                            <action selector="heroButton0Touched:" destination="ef6-Oo-i4v" eventType="touchUpInside" id="u9m-7k-gR9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YM6-4o-D0l">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" backgroundImage="puck_full.png">
+                                        <state key="normal" backgroundImage="add_hero.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="heroButton1Touched:" destination="ef6-Oo-i4v" eventType="touchUpInside" id="m5L-Me-DhW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl3-Dh-jT9">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" backgroundImage="puck_full.png">
+                                        <state key="normal" backgroundImage="add_hero.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="heroButton2Touched:" destination="ef6-Oo-i4v" eventType="touchUpInside" id="U08-Kl-yiy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaP-gu-bji">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" backgroundImage="puck_full.png">
+                                        <state key="normal" backgroundImage="add_hero.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="heroButton3Touched:" destination="ef6-Oo-i4v" eventType="touchUpInside" id="fny-6O-yGr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQe-Nd-MRB">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" backgroundImage="puck_full.png">
+                                        <state key="normal" backgroundImage="add_hero.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="heroButton4Touched:" destination="ef6-Oo-i4v" eventType="touchUpInside" id="LmS-aJ-z5h"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -199,6 +214,14 @@
                                         <exclude reference="MQe-Nd-MRB"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="33m-a0-sj1"/>
+                                        <exclude reference="AcF-J6-sDk"/>
+                                        <exclude reference="oz0-tt-yG5"/>
+                                        <exclude reference="qtb-ja-5rh"/>
+                                        <exclude reference="GwV-nA-jwG"/>
+                                        <exclude reference="av4-nV-v9z"/>
+                                        <exclude reference="eSm-H5-lIs"/>
+                                        <exclude reference="fjN-yY-ue9"/>
                                         <exclude reference="8Tm-JK-tUJ"/>
                                         <exclude reference="DIv-qP-41j"/>
                                         <exclude reference="KNt-2r-Wtu"/>
@@ -211,14 +234,6 @@
                                         <exclude reference="DF7-2m-Ob5"/>
                                         <exclude reference="Mjl-Tf-EOO"/>
                                         <exclude reference="jkA-9q-WBj"/>
-                                        <exclude reference="33m-a0-sj1"/>
-                                        <exclude reference="AcF-J6-sDk"/>
-                                        <exclude reference="oz0-tt-yG5"/>
-                                        <exclude reference="qtb-ja-5rh"/>
-                                        <exclude reference="GwV-nA-jwG"/>
-                                        <exclude reference="av4-nV-v9z"/>
-                                        <exclude reference="eSm-H5-lIs"/>
-                                        <exclude reference="fjN-yY-ue9"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -230,6 +245,14 @@
                                         <include reference="MQe-Nd-MRB"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <include reference="33m-a0-sj1"/>
+                                        <include reference="AcF-J6-sDk"/>
+                                        <include reference="oz0-tt-yG5"/>
+                                        <include reference="qtb-ja-5rh"/>
+                                        <include reference="GwV-nA-jwG"/>
+                                        <include reference="av4-nV-v9z"/>
+                                        <include reference="eSm-H5-lIs"/>
+                                        <include reference="fjN-yY-ue9"/>
                                         <include reference="8Tm-JK-tUJ"/>
                                         <include reference="DIv-qP-41j"/>
                                         <include reference="KNt-2r-Wtu"/>
@@ -242,14 +265,6 @@
                                         <include reference="DF7-2m-Ob5"/>
                                         <include reference="Mjl-Tf-EOO"/>
                                         <include reference="jkA-9q-WBj"/>
-                                        <include reference="33m-a0-sj1"/>
-                                        <include reference="AcF-J6-sDk"/>
-                                        <include reference="oz0-tt-yG5"/>
-                                        <include reference="qtb-ja-5rh"/>
-                                        <include reference="GwV-nA-jwG"/>
-                                        <include reference="av4-nV-v9z"/>
-                                        <include reference="eSm-H5-lIs"/>
-                                        <include reference="fjN-yY-ue9"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -258,23 +273,38 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOD-lz-9P3">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" backgroundImage="puck_full.png"/>
+                                        <state key="normal" backgroundImage="add_hero.png"/>
+                                        <connections>
+                                            <action selector="heroButton6Touched:" destination="ef6-Oo-i4v" eventType="touchUpInside" id="ogh-Nn-4bj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rS-pP-xU1">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" backgroundImage="puck_full.png"/>
+                                        <state key="normal" backgroundImage="add_hero.png"/>
+                                        <connections>
+                                            <action selector="heroButton7Touched:" destination="ef6-Oo-i4v" eventType="touchUpInside" id="6pi-Fb-gAW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpW-Sa-Dqp">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" backgroundImage="puck_full.png"/>
+                                        <state key="normal" backgroundImage="add_hero.png"/>
+                                        <connections>
+                                            <action selector="heroButton8Touched:" destination="ef6-Oo-i4v" eventType="touchUpInside" id="MpP-ap-CgL"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crJ-C6-5VY">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" backgroundImage="puck_full.png"/>
+                                        <state key="normal" backgroundImage="add_hero.png"/>
+                                        <connections>
+                                            <action selector="heroButton9Touched:" destination="ef6-Oo-i4v" eventType="touchUpInside" id="SE7-C0-Bdb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1df-ot-YmX">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" backgroundImage="puck_full.png"/>
+                                        <state key="normal" backgroundImage="add_hero.png"/>
+                                        <connections>
+                                            <action selector="heroButton5Touched:" destination="ef6-Oo-i4v" eventType="touchUpInside" id="tke-ym-KkW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -313,15 +343,15 @@
                                         <exclude reference="ore-SH-lUG"/>
                                         <exclude reference="w1e-Fy-GiW"/>
                                         <exclude reference="xtI-wv-h70"/>
-                                        <exclude reference="HQn-og-4qe"/>
-                                        <exclude reference="gTF-oh-EJB"/>
-                                        <exclude reference="jZf-vy-Glc"/>
-                                        <exclude reference="lxa-h3-Qoq"/>
                                         <exclude reference="6jx-k4-gez"/>
                                         <exclude reference="8rZ-71-5gv"/>
                                         <exclude reference="HIq-KA-ocD"/>
                                         <exclude reference="ZP8-Gp-U1m"/>
                                         <exclude reference="vR8-6h-bAL"/>
+                                        <exclude reference="HQn-og-4qe"/>
+                                        <exclude reference="gTF-oh-EJB"/>
+                                        <exclude reference="jZf-vy-Glc"/>
+                                        <exclude reference="lxa-h3-Qoq"/>
                                         <exclude reference="E3M-uo-M3q"/>
                                         <exclude reference="WPq-nR-j1c"/>
                                         <exclude reference="zC3-VE-rIX"/>
@@ -344,15 +374,15 @@
                                         <include reference="ore-SH-lUG"/>
                                         <include reference="w1e-Fy-GiW"/>
                                         <include reference="xtI-wv-h70"/>
-                                        <include reference="HQn-og-4qe"/>
-                                        <include reference="gTF-oh-EJB"/>
-                                        <include reference="jZf-vy-Glc"/>
-                                        <include reference="lxa-h3-Qoq"/>
                                         <include reference="6jx-k4-gez"/>
                                         <include reference="8rZ-71-5gv"/>
                                         <include reference="HIq-KA-ocD"/>
                                         <include reference="ZP8-Gp-U1m"/>
                                         <include reference="vR8-6h-bAL"/>
+                                        <include reference="HQn-og-4qe"/>
+                                        <include reference="gTF-oh-EJB"/>
+                                        <include reference="jZf-vy-Glc"/>
+                                        <include reference="lxa-h3-Qoq"/>
                                         <include reference="E3M-uo-M3q"/>
                                         <include reference="WPq-nR-j1c"/>
                                         <include reference="zC3-VE-rIX"/>
@@ -368,7 +398,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gug-I5-kbV">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Return">
+                                        <state key="normal" title="Back">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -444,7 +474,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3Jl-Vt-1Yn" firstAttribute="top" secondItem="Wbe-iy-Hq8" secondAttribute="bottom" constant="8" id="1S7-gn-uld"/>
-                            <constraint firstAttribute="trailing" secondItem="3Jl-Vt-1Yn" secondAttribute="trailing" constant="26" id="5mT-Ay-bfL"/>
+                            <constraint firstAttribute="trailing" secondItem="3Jl-Vt-1Yn" secondAttribute="trailing" constant="26" id="5mT-Ay-bfL">
+                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                            </constraint>
                             <constraint firstItem="Wbe-iy-Hq8" firstAttribute="leading" secondItem="k47-JF-Nyw" secondAttribute="trailing" constant="8" id="DGv-Bp-X1M"/>
                             <constraint firstItem="0Tp-E3-ZHw" firstAttribute="top" secondItem="S7v-qT-4q4" secondAttribute="bottom" id="EFn-Ed-ZGp"/>
                             <constraint firstItem="rOy-cg-7eI" firstAttribute="top" secondItem="k47-JF-Nyw" secondAttribute="bottom" constant="130" id="P7O-ve-VSy"/>
@@ -476,23 +508,23 @@
                                 <exclude reference="0Tp-E3-ZHw"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="QZW-BC-o82"/>
-                                <exclude reference="XTv-cl-hIn"/>
-                                <exclude reference="p0x-Kg-ZrR"/>
+                                <exclude reference="EFn-Ed-ZGp"/>
+                                <exclude reference="R2K-v4-McY"/>
                                 <exclude reference="Yf8-3u-3Jd"/>
                                 <exclude reference="ePQ-KL-ss4"/>
+                                <exclude reference="P7O-ve-VSy"/>
+                                <exclude reference="Tlk-In-aio"/>
+                                <exclude reference="WR3-a3-TUl"/>
+                                <exclude reference="1S7-gn-uld"/>
+                                <exclude reference="5mT-Ay-bfL"/>
+                                <exclude reference="UKk-0A-mjx"/>
                                 <exclude reference="DGv-Bp-X1M"/>
                                 <exclude reference="RZw-vV-Scx"/>
                                 <exclude reference="SLs-gK-iit"/>
                                 <exclude reference="xxN-aS-1Za"/>
-                                <exclude reference="EFn-Ed-ZGp"/>
-                                <exclude reference="R2K-v4-McY"/>
-                                <exclude reference="1S7-gn-uld"/>
-                                <exclude reference="5mT-Ay-bfL"/>
-                                <exclude reference="UKk-0A-mjx"/>
-                                <exclude reference="P7O-ve-VSy"/>
-                                <exclude reference="Tlk-In-aio"/>
-                                <exclude reference="WR3-a3-TUl"/>
+                                <exclude reference="QZW-BC-o82"/>
+                                <exclude reference="XTv-cl-hIn"/>
+                                <exclude reference="p0x-Kg-ZrR"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -504,23 +536,23 @@
                                 <include reference="0Tp-E3-ZHw"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="QZW-BC-o82"/>
-                                <include reference="XTv-cl-hIn"/>
-                                <include reference="p0x-Kg-ZrR"/>
+                                <include reference="EFn-Ed-ZGp"/>
+                                <include reference="R2K-v4-McY"/>
                                 <include reference="Yf8-3u-3Jd"/>
                                 <include reference="ePQ-KL-ss4"/>
+                                <include reference="P7O-ve-VSy"/>
+                                <include reference="Tlk-In-aio"/>
+                                <include reference="WR3-a3-TUl"/>
+                                <include reference="1S7-gn-uld"/>
+                                <include reference="5mT-Ay-bfL"/>
+                                <include reference="UKk-0A-mjx"/>
                                 <include reference="DGv-Bp-X1M"/>
                                 <include reference="RZw-vV-Scx"/>
                                 <include reference="SLs-gK-iit"/>
                                 <include reference="xxN-aS-1Za"/>
-                                <include reference="EFn-Ed-ZGp"/>
-                                <include reference="R2K-v4-McY"/>
-                                <include reference="1S7-gn-uld"/>
-                                <include reference="5mT-Ay-bfL"/>
-                                <include reference="UKk-0A-mjx"/>
-                                <include reference="P7O-ve-VSy"/>
-                                <include reference="Tlk-In-aio"/>
-                                <include reference="WR3-a3-TUl"/>
+                                <include reference="QZW-BC-o82"/>
+                                <include reference="XTv-cl-hIn"/>
+                                <include reference="p0x-Kg-ZrR"/>
                             </mask>
                         </variation>
                     </view>
@@ -532,7 +564,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="puck_full.png" width="256" height="144"/>
+        <image name="add_hero.png" width="256" height="144"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tYv-pZ-hhb"/>
