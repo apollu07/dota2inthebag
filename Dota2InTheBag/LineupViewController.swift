@@ -35,7 +35,7 @@ class LineupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // Detect hero button touch event
+    // Detect hero button touch event.
     @IBAction func heroButton0Touched(sender: AnyObject) {
         touchedHeroButtonID = 0
     }
@@ -65,6 +65,11 @@ class LineupViewController: UIViewController {
     }
     @IBAction func heroButton9Touched(sender: AnyObject) {
         touchedHeroButtonID = 9
+    }
+    
+    // Return from hero search page.
+    @IBAction func returned(segue: UIStoryboardSegue) {
+        println("returned from Hero search page.")
     }
     
     /*
