@@ -29,18 +29,22 @@ class MatchLevelViewController: UIViewController {
     
     @IBAction func normalSkillSelected(sender: AnyObject) {
         matchLevel = .NormalSkill
+        performSegueWithIdentifier("matchLevelToLineupSegue", sender: nil)
     }
 
     @IBAction func highSkillSelected(sender: AnyObject) {
         matchLevel = .HighSkill
+        performSegueWithIdentifier("matchLevelToLineupSegue", sender: nil)
     }
     
     @IBAction func veryHighSkillSelected(sender: AnyObject) {
         matchLevel = .VeryHighSkill
+        performSegueWithIdentifier("matchLevelToLineupSegue", sender: nil)
     }
     
     @IBAction func iDontKnowSelected(sender: AnyObject) {
         matchLevel = .Unknown
+        performSegueWithIdentifier("matchLevelToLineupSegue", sender: nil)
     }
     
     @IBAction func returned(segue: UIStoryboardSegue) {

@@ -38,33 +38,43 @@ class LineupViewController: UIViewController {
     // Detect hero button touch event.
     @IBAction func heroButton0Touched(sender: AnyObject) {
         touchedHeroButtonID = 0
+        performSegueWithIdentifier("lineupToHeroSearchSegue", sender: nil)
     }
     @IBAction func heroButton1Touched(sender: AnyObject) {
         touchedHeroButtonID = 1
+        performSegueWithIdentifier("lineupToHeroSearchSegue", sender: nil)
     }
     @IBAction func heroButton2Touched(sender: AnyObject) {
         touchedHeroButtonID = 2
+        performSegueWithIdentifier("lineupToHeroSearchSegue", sender: nil)
     }
     @IBAction func heroButton3Touched(sender: AnyObject) {
         touchedHeroButtonID = 3
+        performSegueWithIdentifier("lineupToHeroSearchSegue", sender: nil)
     }
     @IBAction func heroButton4Touched(sender: AnyObject) {
         touchedHeroButtonID = 4
+        performSegueWithIdentifier("lineupToHeroSearchSegue", sender: nil)
     }
     @IBAction func heroButton5Touched(sender: AnyObject) {
         touchedHeroButtonID = 5
+        performSegueWithIdentifier("lineupToHeroSearchSegue", sender: nil)
     }
     @IBAction func heroButton6Touched(sender: AnyObject) {
         touchedHeroButtonID = 6
+        performSegueWithIdentifier("lineupToHeroSearchSegue", sender: nil)
     }
     @IBAction func heroButton7Touched(sender: AnyObject) {
         touchedHeroButtonID = 7
+        performSegueWithIdentifier("lineupToHeroSearchSegue", sender: nil)
     }
     @IBAction func heroButton8Touched(sender: AnyObject) {
         touchedHeroButtonID = 8
+        performSegueWithIdentifier("lineupToHeroSearchSegue", sender: nil)
     }
     @IBAction func heroButton9Touched(sender: AnyObject) {
         touchedHeroButtonID = 9
+        performSegueWithIdentifier("lineupToHeroSearchSegue", sender: nil)
     }
     
     // Return from hero search page.

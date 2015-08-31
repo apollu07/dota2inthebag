@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -31,7 +32,6 @@
                                 </state>
                                 <connections>
                                     <action selector="normalSkillSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EVW-n3-JHV"/>
-                                    <segue destination="ef6-Oo-i4v" kind="show" id="RCn-jQ-xKm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2O-Pa-IRJ">
@@ -41,7 +41,6 @@
                                 </state>
                                 <connections>
                                     <action selector="highSkillSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yL6-Op-cE4"/>
-                                    <segue destination="ef6-Oo-i4v" kind="show" id="tYv-pZ-hhb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JB-ic-gRl">
@@ -51,7 +50,6 @@
                                 </state>
                                 <connections>
                                     <action selector="veryHighSkillSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DWm-bw-5X5"/>
-                                    <segue destination="ef6-Oo-i4v" kind="show" id="jRd-Le-ylr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW5-mE-Fls">
@@ -61,7 +59,6 @@
                                 </state>
                                 <connections>
                                     <action selector="iDontKnowSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VX9-ul-Q2L"/>
-                                    <segue destination="ef6-Oo-i4v" kind="show" id="jCB-wf-Dma"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -119,6 +116,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <segue destination="ef6-Oo-i4v" kind="show" identifier="matchLevelToLineupSegue" id="7JO-kK-j2I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,7 +144,6 @@
                                         <state key="normal" backgroundImage="add_hero.png"/>
                                         <connections>
                                             <action selector="heroButton0Touched:" destination="ef6-Oo-i4v" eventType="touchUpInside" id="u9m-7k-gR9"/>
-                                            <segue destination="4Xq-GN-DAf" kind="show" id="kgG-ng-O2W"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YM6-4o-D0l">
@@ -558,6 +557,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <segue destination="4Xq-GN-DAf" kind="show" identifier="lineupToHeroSearchSegue" id="Wl4-YB-p0Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwD-Qs-sW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fHQ-iK-cle" userLabel="Exit" sceneMemberID="exit"/>
@@ -573,6 +575,7 @@
                         <viewControllerLayoutGuide type="bottom" id="IYF-tp-kce"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3wk-vF-u4t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search with hero name or nick name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dbj-8B-RuS">
@@ -647,13 +650,13 @@
                                 <exclude reference="w1L-cL-p8z"/>
                                 <exclude reference="FjN-Ck-jYd"/>
                                 <exclude reference="pyU-t6-fR8"/>
-                                <exclude reference="B45-sx-0ec"/>
-                                <exclude reference="Q1W-Vr-aUV"/>
+                                <exclude reference="teA-Io-RSX"/>
+                                <exclude reference="1If-7G-5z9"/>
                                 <exclude reference="DgB-f3-G2c"/>
                                 <exclude reference="Wi1-DC-oNe"/>
                                 <exclude reference="gEK-SN-XTK"/>
-                                <exclude reference="1If-7G-5z9"/>
-                                <exclude reference="teA-Io-RSX"/>
+                                <exclude reference="B45-sx-0ec"/>
+                                <exclude reference="Q1W-Vr-aUV"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -671,13 +674,13 @@
                                 <include reference="w1L-cL-p8z"/>
                                 <include reference="FjN-Ck-jYd"/>
                                 <include reference="pyU-t6-fR8"/>
-                                <exclude reference="B45-sx-0ec"/>
-                                <exclude reference="Q1W-Vr-aUV"/>
+                                <include reference="teA-Io-RSX"/>
+                                <include reference="1If-7G-5z9"/>
                                 <include reference="DgB-f3-G2c"/>
                                 <include reference="Wi1-DC-oNe"/>
                                 <include reference="gEK-SN-XTK"/>
-                                <include reference="1If-7G-5z9"/>
-                                <include reference="teA-Io-RSX"/>
+                                <exclude reference="B45-sx-0ec"/>
+                                <exclude reference="Q1W-Vr-aUV"/>
                             </mask>
                         </variation>
                     </view>
@@ -694,7 +697,4 @@
     <resources>
         <image name="add_hero.png" width="256" height="144"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="tYv-pZ-hhb"/>
-    </inferredMetricsTieBreakers>
 </document>

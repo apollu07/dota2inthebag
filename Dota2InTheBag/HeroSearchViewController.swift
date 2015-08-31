@@ -33,6 +33,7 @@ class HeroSearchViewController: UIViewController, UITextFieldDelegate {
         searchInput.text = nil
     }
     @IBAction func searchButtonTouched(sender: AnyObject) {
+        searchInput.resignFirstResponder();
         if searchInput.text != nil {
           heroName = searchInput.text!
           println("Hero name is: \(heroName!) from search button")
