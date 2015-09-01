@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AF0097191B8ED4DD00B129A6 /* MatchLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */; };
-		AF70EADE1B929A35003FCD33 /* add_hero.png in Resources */ = {isa = PBXBuildFile; fileRef = AF70EADD1B929A35003FCD33 /* add_hero.png */; };
 		AF8021641B8F812100BDD529 /* LineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8021631B8F812100BDD529 /* LineupViewController.swift */; };
 		AF96D9B11B93E57A00CCB033 /* HeroSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96D9B01B93E57A00CCB033 /* HeroSearchViewController.swift */; };
 		AFA3104C1B8C21AE001F136D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3104B1B8C21AE001F136D /* AppDelegate.swift */; };
@@ -18,6 +17,7 @@
 		AFA310591B8C21AE001F136D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA310571B8C21AE001F136D /* LaunchScreen.xib */; };
 		AFA310651B8C21AE001F136D /* Dota2InTheBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA310641B8C21AE001F136D /* Dota2InTheBagTests.swift */; };
 		AFBBB00F1B9560C400524A11 /* DotaHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBBB00E1B9560C400524A11 /* DotaHero.swift */; };
+		AFBBB0111B95674E00524A11 /* add_hero.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBBB0101B95674E00524A11 /* add_hero.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,6 @@
 
 /* Begin PBXFileReference section */
 		AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchLevelViewController.swift; sourceTree = "<group>"; };
-		AF70EADD1B929A35003FCD33 /* add_hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_hero.png; sourceTree = "<group>"; };
 		AF8021631B8F812100BDD529 /* LineupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineupViewController.swift; sourceTree = "<group>"; };
 		AF96D9B01B93E57A00CCB033 /* HeroSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroSearchViewController.swift; sourceTree = "<group>"; };
 		AFA310461B8C21AE001F136D /* Dota2InTheBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2InTheBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +45,7 @@
 		AFA310631B8C21AE001F136D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFA310641B8C21AE001F136D /* Dota2InTheBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2InTheBagTests.swift; sourceTree = "<group>"; };
 		AFBBB00E1B9560C400524A11 /* DotaHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotaHero.swift; sourceTree = "<group>"; };
+		AFBBB0101B95674E00524A11 /* add_hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_hero.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 		AFA310491B8C21AE001F136D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AF70EADD1B929A35003FCD33 /* add_hero.png */,
+				AFBBB0101B95674E00524A11 /* add_hero.png */,
 				AFA3104A1B8C21AE001F136D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -208,8 +208,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA310541B8C21AE001F136D /* Main.storyboard in Resources */,
+				AFBBB0111B95674E00524A11 /* add_hero.png in Resources */,
 				AFA310591B8C21AE001F136D /* LaunchScreen.xib in Resources */,
-				AF70EADE1B929A35003FCD33 /* add_hero.png in Resources */,
 				AFA310561B8C21AE001F136D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
