@@ -17,6 +17,7 @@
 		AFA310561B8C21AE001F136D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA310551B8C21AE001F136D /* Images.xcassets */; };
 		AFA310591B8C21AE001F136D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA310571B8C21AE001F136D /* LaunchScreen.xib */; };
 		AFA310651B8C21AE001F136D /* Dota2InTheBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA310641B8C21AE001F136D /* Dota2InTheBagTests.swift */; };
+		AFBBB00F1B9560C400524A11 /* DotaHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBBB00E1B9560C400524A11 /* DotaHero.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		AFA3105E1B8C21AE001F136D /* Dota2InTheBagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dota2InTheBagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA310631B8C21AE001F136D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFA310641B8C21AE001F136D /* Dota2InTheBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2InTheBagTests.swift; sourceTree = "<group>"; };
+		AFBBB00E1B9560C400524A11 /* DotaHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotaHero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */,
 				AF8021631B8F812100BDD529 /* LineupViewController.swift */,
 				AF96D9B01B93E57A00CCB033 /* HeroSearchViewController.swift */,
+				AFBBB00E1B9560C400524A11 /* DotaHero.swift */,
 			);
 			path = Dota2InTheBag;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				AFA3104F1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld in Sources */,
 				AF8021641B8F812100BDD529 /* LineupViewController.swift in Sources */,
 				AF0097191B8ED4DD00B129A6 /* MatchLevelViewController.swift in Sources */,
+				AFBBB00F1B9560C400524A11 /* DotaHero.swift in Sources */,
 				AFA3104C1B8C21AE001F136D /* AppDelegate.swift in Sources */,
 				AF96D9B11B93E57A00CCB033 /* HeroSearchViewController.swift in Sources */,
 			);
