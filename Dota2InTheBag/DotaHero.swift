@@ -42,4 +42,26 @@ class SingletonDotaHeroDatabase {
         database.append(DotaHero(id: 1, name: "Sven", image: "sven.png", type: "str", names: ["sven", "seven"]))
         database.append(DotaHero(id: 2, name: "Tiny", image: "tiny.png", type: "str", names: ["tiny"]))
     }
+    
+    // Search and return dota hero based on the input name.
+    func searchForHero(name: String) -> DotaHero? {
+        for currHero in database {
+            for currName in currHero.allNames {
+                if nameMatches(on: currName, and: name) {
+                    return currHero
+                }
+            }
+        }
+        return nil
+    }
+    
+    // Decide if two hero name string matches.
+    func nameMatches(on name1: String, and name2: String) -> Bool {
+        // Normalization
+        let name1_l = name1.lowercaseString
+        let name2_l = name2.lowercaseString
+        let name1_ls = name1_l.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        let name2_ls = name2_l.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        return name1_ls == name2_ls
+    }
 }

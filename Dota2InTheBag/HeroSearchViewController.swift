@@ -10,17 +10,16 @@ import UIKit
 
 class HeroSearchViewController: UIViewController, UITextFieldDelegate {
     
-    var heroName: String?
     var heroDatabase: SingletonDotaHeroDatabase?
+    var heroIDToAdd: Int?
     
     @IBOutlet weak var searchInput: UITextField!
+    @IBOutlet weak var searchResultLabel: UILabel!
+    @IBOutlet weak var searchResultImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         searchInput.delegate = self
-        
-        println("Size of hero database is: \(heroDatabase?.database.count)")
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,26 +37,28 @@ class HeroSearchViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func searchButtonTouched(sender: AnyObject) {
         searchInput.resignFirstResponder();
-        if searchInput.text != nil {
-          heroName = searchInput.text!
-          println("Hero name is: \(heroName!) from search button")
-        } else {
-            println("Invalid search input!")
-        }
+        let heroFound = heroDatabase?.searchForHero(searchInput.text)
+        displayHero(heroFound)
     }
     
     // UITextField delegates.
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if searchInput.text != nil {
-            heroName = searchInput.text!
-            println("Hero name is: \(heroName!) from enter")
-        } else {
-            println("Invalid search input!")
-        }
         searchInput.resignFirstResponder();
+        let heroFound = heroDatabase?.searchForHero(searchInput.text)
+        displayHero(heroFound)
         return true;
     }
     
+    // Display hero's official name and image given a hero ID.
+    func displayHero(hero: DotaHero?) {
+        if let currHero = hero {
+            searchResultLabel.text = currHero.officialName
+            searchResultImage.image = UIImage(named: currHero.imageURL)
+        } else {
+            searchResultLabel.text = "Invalid hero name. Please try again."
+            searchResultImage.image = UIImage(named: "unknown_hero.png")
+        }
+    }
     /*
     // MARK: - Navigation
 

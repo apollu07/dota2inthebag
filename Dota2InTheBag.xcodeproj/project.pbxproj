@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF0097191B8ED4DD00B129A6 /* MatchLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */; };
+		AF2799231B99053E00F9B346 /* unknown_hero.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2799221B99053E00F9B346 /* unknown_hero.png */; };
 		AF8021641B8F812100BDD529 /* LineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8021631B8F812100BDD529 /* LineupViewController.swift */; };
 		AF96D9B11B93E57A00CCB033 /* HeroSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96D9B01B93E57A00CCB033 /* HeroSearchViewController.swift */; };
 		AFA3104C1B8C21AE001F136D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3104B1B8C21AE001F136D /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchLevelViewController.swift; sourceTree = "<group>"; };
+		AF2799221B99053E00F9B346 /* unknown_hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown_hero.png; sourceTree = "<group>"; };
 		AF8021631B8F812100BDD529 /* LineupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineupViewController.swift; sourceTree = "<group>"; };
 		AF96D9B01B93E57A00CCB033 /* HeroSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroSearchViewController.swift; sourceTree = "<group>"; };
 		AFA310461B8C21AE001F136D /* Dota2InTheBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2InTheBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 				AFD574821B97D69C00B9ED55 /* earthshaker.png */,
 				AFD574861B97D6A600B9ED55 /* tiny.png */,
 				AFBBB0101B95674E00524A11 /* add_hero.png */,
+				AF2799221B99053E00F9B346 /* unknown_hero.png */,
 				AFA3104A1B8C21AE001F136D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -216,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2799231B99053E00F9B346 /* unknown_hero.png in Resources */,
 				AFD574871B97D6A600B9ED55 /* tiny.png in Resources */,
 				AFA310541B8C21AE001F136D /* Main.storyboard in Resources */,
 				AFBBB0111B95674E00524A11 /* add_hero.png in Resources */,
