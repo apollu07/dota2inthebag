@@ -11,11 +11,15 @@ import UIKit
 class HeroSearchViewController: UIViewController, UITextFieldDelegate {
     
     var heroName: String?
+    var heroDatabase: SingletonDotaHeroDatabase?
+    
     @IBOutlet weak var searchInput: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         searchInput.delegate = self
+        
+        println("Size of hero database is: \(heroDatabase?.database.count)")
         // Do any additional setup after loading the view.
     }
 

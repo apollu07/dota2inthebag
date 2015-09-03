@@ -52,7 +52,6 @@ class MatchLevelViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // TODO(lu): fix the button segue order bug
         let destination = segue.destinationViewController as! LineupViewController
         if let curMatchLevel = matchLevel {
             destination.matchLevel = curMatchLevel

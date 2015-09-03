@@ -18,6 +18,9 @@
 		AFA310651B8C21AE001F136D /* Dota2InTheBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA310641B8C21AE001F136D /* Dota2InTheBagTests.swift */; };
 		AFBBB00F1B9560C400524A11 /* DotaHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBBB00E1B9560C400524A11 /* DotaHero.swift */; };
 		AFBBB0111B95674E00524A11 /* add_hero.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBBB0101B95674E00524A11 /* add_hero.png */; };
+		AFD574831B97D69C00B9ED55 /* earthshaker.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD574821B97D69C00B9ED55 /* earthshaker.png */; };
+		AFD574851B97D6A100B9ED55 /* sven.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD574841B97D6A100B9ED55 /* sven.png */; };
+		AFD574871B97D6A600B9ED55 /* tiny.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD574861B97D6A600B9ED55 /* tiny.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		AFA310641B8C21AE001F136D /* Dota2InTheBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2InTheBagTests.swift; sourceTree = "<group>"; };
 		AFBBB00E1B9560C400524A11 /* DotaHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotaHero.swift; sourceTree = "<group>"; };
 		AFBBB0101B95674E00524A11 /* add_hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_hero.png; sourceTree = "<group>"; };
+		AFD574821B97D69C00B9ED55 /* earthshaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earthshaker.png; sourceTree = "<group>"; };
+		AFD574841B97D6A100B9ED55 /* sven.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sven.png; sourceTree = "<group>"; };
+		AFD574861B97D6A600B9ED55 /* tiny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiny.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,9 @@
 		AFA310491B8C21AE001F136D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AFD574841B97D6A100B9ED55 /* sven.png */,
+				AFD574821B97D69C00B9ED55 /* earthshaker.png */,
+				AFD574861B97D6A600B9ED55 /* tiny.png */,
 				AFBBB0101B95674E00524A11 /* add_hero.png */,
 				AFA3104A1B8C21AE001F136D /* Info.plist */,
 			);
@@ -207,10 +216,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD574871B97D6A600B9ED55 /* tiny.png in Resources */,
 				AFA310541B8C21AE001F136D /* Main.storyboard in Resources */,
 				AFBBB0111B95674E00524A11 /* add_hero.png in Resources */,
 				AFA310591B8C21AE001F136D /* LaunchScreen.xib in Resources */,
 				AFA310561B8C21AE001F136D /* Images.xcassets in Resources */,
+				AFD574831B97D69C00B9ED55 /* earthshaker.png in Resources */,
+				AFD574851B97D6A100B9ED55 /* sven.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

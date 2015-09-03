@@ -11,7 +11,8 @@ import UIKit
 class LineupViewController: UIViewController {
     
     var matchLevel: MatchLevelViewController.MatchLevel?
-    
+    var heroDatabase: SingletonDotaHeroDatabase?
+        
     // Which hero button in the screen is touched.
     // If no hero is selected for that position, we go to the hero selection screen.
     // Otherwise we enable the user to edit/remove it.
@@ -25,7 +26,9 @@ class LineupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        heroDatabase = SingletonDotaHeroDatabase.sharedInstance
+        
         // Do any additional setup after loading the view.
         println("Match level is: \(matchLevel!.rawValue)")
     }
@@ -82,14 +85,14 @@ class LineupViewController: UIViewController {
         println("returned from Hero search page.")
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "lineupToHeroSearchSegue" {
+          let destination = segue.destinationViewController as! HeroSearchViewController
+          destination.heroDatabase = heroDatabase
+        }
     }
-    */
 
 }
