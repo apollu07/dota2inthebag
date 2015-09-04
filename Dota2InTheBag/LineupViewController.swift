@@ -12,7 +12,19 @@ class LineupViewController: UIViewController {
     
     var matchLevel: MatchLevelViewController.MatchLevel?
     var heroDatabase: SingletonDotaHeroDatabase?
+    var heroLineup: SingletonHeroLineup?
         
+    @IBOutlet weak var heroButton0: UIButton!
+    @IBOutlet weak var heroButton1: UIButton!
+    @IBOutlet weak var heroButton2: UIButton!
+    @IBOutlet weak var heroButton3: UIButton!
+    @IBOutlet weak var heroButton4: UIButton!
+    @IBOutlet weak var heroButton5: UIButton!
+    @IBOutlet weak var heroButton6: UIButton!
+    @IBOutlet weak var heroButton7: UIButton!
+    @IBOutlet weak var heroButton8: UIButton!
+    @IBOutlet weak var heroButton9: UIButton!
+    
     // Which hero button in the screen is touched.
     // If no hero is selected for that position, we go to the hero selection screen.
     // Otherwise we enable the user to edit/remove it.
@@ -28,6 +40,7 @@ class LineupViewController: UIViewController {
         super.viewDidLoad()
         
         heroDatabase = SingletonDotaHeroDatabase.sharedInstance
+        heroLineup = SingletonHeroLineup.sharedInstance
         
         // Do any additional setup after loading the view.
         println("Match level is: \(matchLevel!.rawValue)")
@@ -85,6 +98,20 @@ class LineupViewController: UIViewController {
         println("returned from Hero search page.")
     }
     
+    // Add hero from hero search page.
+    @IBAction func returnedWithNewHeroFromSearch(segue: UIStoryboardSegue) {
+        // Render selected heros
+        let heroButtonArray = [heroButton0, heroButton1, heroButton2, heroButton3, heroButton4, heroButton5, heroButton6, heroButton7, heroButton8, heroButton9]
+        for i in 0...9 {
+            if let hero = heroLineup?.heroAt(position: i) {
+                heroButtonArray[i].setBackgroundImage(UIImage(named: hero.imageURL), forState: .Normal)
+            } else {
+                heroButtonArray[i].setBackgroundImage(UIImage(named: "add_hero.png"), forState: .Normal)
+            }
+        }
+        println("returned from Hero search page after adding hero from search.")
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -92,6 +119,8 @@ class LineupViewController: UIViewController {
         if segue.identifier == "lineupToHeroSearchSegue" {
           let destination = segue.destinationViewController as! HeroSearchViewController
           destination.heroDatabase = heroDatabase
+          destination.heroLineup = heroLineup
+          destination.touchedHeroButtonID = touchedHeroButtonID
         }
     }
 

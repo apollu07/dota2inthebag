@@ -65,3 +65,24 @@ class SingletonDotaHeroDatabase {
         return name1_ls == name2_ls
     }
 }
+
+class SingletonHeroLineup {
+    static let sharedInstance = SingletonHeroLineup()
+    
+    var lineup: [DotaHero?] = []
+    
+    // Init function to set up 10 heros (nil)
+    init() {
+        for i in 0...9 {
+            lineup.append(nil)
+        }
+    }
+    
+    func heroAt(position pos: Int) -> DotaHero? {
+        return lineup[pos]
+    }
+    
+    func setHeroAt(position pos: Int, to hero: DotaHero?) {
+        lineup[pos] = hero
+    }
+}

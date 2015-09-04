@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		AF0097191B8ED4DD00B129A6 /* MatchLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */; };
 		AF2799231B99053E00F9B346 /* unknown_hero.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2799221B99053E00F9B346 /* unknown_hero.png */; };
+		AF2799251B993BA200F9B346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2799241B993BA200F9B346 /* Main.storyboard */; };
 		AF8021641B8F812100BDD529 /* LineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8021631B8F812100BDD529 /* LineupViewController.swift */; };
 		AF96D9B11B93E57A00CCB033 /* HeroSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96D9B01B93E57A00CCB033 /* HeroSearchViewController.swift */; };
 		AFA3104C1B8C21AE001F136D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3104B1B8C21AE001F136D /* AppDelegate.swift */; };
 		AFA3104F1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFA3104D1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld */; };
-		AFA310541B8C21AE001F136D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA310521B8C21AE001F136D /* Main.storyboard */; };
 		AFA310561B8C21AE001F136D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA310551B8C21AE001F136D /* Images.xcassets */; };
 		AFA310591B8C21AE001F136D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA310571B8C21AE001F136D /* LaunchScreen.xib */; };
 		AFA310651B8C21AE001F136D /* Dota2InTheBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA310641B8C21AE001F136D /* Dota2InTheBagTests.swift */; };
@@ -37,13 +37,13 @@
 /* Begin PBXFileReference section */
 		AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchLevelViewController.swift; sourceTree = "<group>"; };
 		AF2799221B99053E00F9B346 /* unknown_hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown_hero.png; sourceTree = "<group>"; };
+		AF2799241B993BA200F9B346 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AF8021631B8F812100BDD529 /* LineupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineupViewController.swift; sourceTree = "<group>"; };
 		AF96D9B01B93E57A00CCB033 /* HeroSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroSearchViewController.swift; sourceTree = "<group>"; };
 		AFA310461B8C21AE001F136D /* Dota2InTheBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2InTheBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA3104A1B8C21AE001F136D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFA3104B1B8C21AE001F136D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA3104E1B8C21AE001F136D /* Dota2InTheBag.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dota2InTheBag.xcdatamodel; sourceTree = "<group>"; };
-		AFA310531B8C21AE001F136D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFA310551B8C21AE001F136D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AFA310581B8C21AE001F136D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AFA3105E1B8C21AE001F136D /* Dota2InTheBagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dota2InTheBagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA3104B1B8C21AE001F136D /* AppDelegate.swift */,
-				AFA310521B8C21AE001F136D /* Main.storyboard */,
+				AF2799241B993BA200F9B346 /* Main.storyboard */,
 				AFA310551B8C21AE001F136D /* Images.xcassets */,
 				AFA310571B8C21AE001F136D /* LaunchScreen.xib */,
 				AFA3104D1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld */,
@@ -221,8 +221,8 @@
 			files = (
 				AF2799231B99053E00F9B346 /* unknown_hero.png in Resources */,
 				AFD574871B97D6A600B9ED55 /* tiny.png in Resources */,
-				AFA310541B8C21AE001F136D /* Main.storyboard in Resources */,
 				AFBBB0111B95674E00524A11 /* add_hero.png in Resources */,
+				AF2799251B993BA200F9B346 /* Main.storyboard in Resources */,
 				AFA310591B8C21AE001F136D /* LaunchScreen.xib in Resources */,
 				AFA310561B8C21AE001F136D /* Images.xcassets in Resources */,
 				AFD574831B97D69C00B9ED55 /* earthshaker.png in Resources */,
@@ -272,14 +272,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AFA310521B8C21AE001F136D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AFA310531B8C21AE001F136D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AFA310571B8C21AE001F136D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -11,7 +11,9 @@ import UIKit
 class HeroSearchViewController: UIViewController, UITextFieldDelegate {
     
     var heroDatabase: SingletonDotaHeroDatabase?
-    var heroIDToAdd: Int?
+    var heroLineup: SingletonHeroLineup?
+    var touchedHeroButtonID: Int?
+    var heroToAdd: DotaHero?
     
     @IBOutlet weak var searchInput: UITextField!
     @IBOutlet weak var searchResultLabel: UILabel!
@@ -20,6 +22,15 @@ class HeroSearchViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchInput.delegate = self
+        // Render hero name and image with the current position's hero if it exists.
+        // TODO(lulu): consider if touchedHeroButtonID will ever be invalid
+        if let currHero = heroLineup?.heroAt(position: touchedHeroButtonID!) {
+            searchResultLabel.text = currHero.officialName
+            searchResultImage.image = UIImage(named: currHero.imageURL)
+        } else {
+            searchResultLabel.text = ""
+            searchResultImage.image = UIImage(named: "unknown_hero.png")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,13 +50,24 @@ class HeroSearchViewController: UIViewController, UITextFieldDelegate {
         searchInput.resignFirstResponder();
         let heroFound = heroDatabase?.searchForHero(searchInput.text)
         displayHero(heroFound)
+        if heroFound != nil {
+            heroToAdd = heroFound
+        }
+    }
+    @IBAction func addHeroButtonTouched(sender: AnyObject) {
+        heroLineup?.setHeroAt(position: touchedHeroButtonID!, to: heroToAdd)
+        performSegueWithIdentifier("addHeroFromSearchSegue", sender: self)
     }
     
     // UITextField delegates.
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         searchInput.resignFirstResponder();
+        // TODO(lulu): refactor the code below into a function.
         let heroFound = heroDatabase?.searchForHero(searchInput.text)
         displayHero(heroFound)
+        if heroFound != nil {
+            heroToAdd = heroFound
+        }
         return true;
     }
     
