@@ -41,9 +41,16 @@ class SingletonDotaHeroDatabase {
     // Hard-coded init function to add all dota heros to the database.
     init() {
         println("Initializing dota hero database.")
-        database.append(DotaHero(id: 0, name: "Earthshaker", image: "earthshaker.png", type: "str", names: ["earthshaker", "es", "shaker", "earth shaker"]))
-        database.append(DotaHero(id: 1, name: "Sven", image: "sven.png", type: "str", names: ["sven", "seven"]))
-        database.append(DotaHero(id: 2, name: "Tiny", image: "tiny.png", type: "str", names: ["tiny"]))
+        database.append(DotaHero(id: 1, name: "Antimage", image: "antimage.png", type: "agi", names: ["antimage", "anti-mage", "anti mage", "am"]))
+        database.append(DotaHero(id: 2, name: "Axe", image: "axe.png", type: "str", names: ["axe", "ax"]))
+        database.append(DotaHero(id: 3, name: "Bane", image: "bane.png", type: "int", names: ["bane"]))
+        database.append(DotaHero(id: 4, name: "Bloodseeker", image: "bloodseeker.png", type: "agi", names: ["bloodseeker", "bs", "blood seeker", "blood"]))
+        database.append(DotaHero(id: 5, name: "Crystal Maiden", image: "crystal_maiden.png", type: "int", names: ["crystal maiden", "cm", "maiden", "crystal"]))
+        database.append(DotaHero(id: 6, name: "Drow Ranger", image: "drow_ranger.png", type: "agi", names: ["drow ranger", "drow", "dr"]))
+        database.append(DotaHero(id: 7, name: "Earthshaker", image: "earthshaker.png", type: "str", names: ["earthshaker", "earth shaker", "shaker", "es"]))
+        database.append(DotaHero(id: 8, name: "Juggernaut", image: "juggernaut.png", type: "agi", names: ["juggernaut", "jugg"]))
+        database.append(DotaHero(id: 9, name: "Mirana", image: "mirana.png", type: "agi", names: ["mirana", "tiger"]))
+        database.append(DotaHero(id: 10, name: "Morphling", image: "morphling.png", type: "agi", names: ["morphline", "morph"]))
         
         // Init heroes of different types.
         for hero in database {
