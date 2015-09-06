@@ -85,4 +85,10 @@ class SingletonHeroLineup {
     func setHeroAt(position pos: Int, to hero: DotaHero?) {
         lineup[pos] = hero
     }
+    
+    func clear() {
+        for i in 0...9 {
+            lineup[i] = nil
+        }
+    }
 }

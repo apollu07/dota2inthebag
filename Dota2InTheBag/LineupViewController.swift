@@ -95,6 +95,12 @@ class LineupViewController: UIViewController {
         performSegueWithIdentifier("lineupToHeroSearchSegue", sender: nil)
     }
     
+    // Reset all selected heroes.
+    @IBAction func resetButtonTouched(sender: AnyObject) {
+        heroLineup?.clear()
+        renderSelectedHeroes()
+    }
+    
     // Return from hero search page.
     @IBAction func returned(segue: UIStoryboardSegue) {
         println("returned from Hero search page.")

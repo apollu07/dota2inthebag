@@ -412,6 +412,9 @@
                                         <state key="normal" title="Reset">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="resetButtonTouched:" destination="ef6-Oo-i4v" eventType="touchUpInside" id="thz-gh-s1E"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1j5-5G-T6l">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
