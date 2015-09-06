@@ -42,6 +42,8 @@ class LineupViewController: UIViewController {
         heroDatabase = SingletonDotaHeroDatabase.sharedInstance
         heroLineup = SingletonHeroLineup.sharedInstance
         
+        renderSelectedHeroes()
+        
         // Do any additional setup after loading the view.
         println("Match level is: \(matchLevel!.rawValue)")
     }
@@ -100,7 +102,12 @@ class LineupViewController: UIViewController {
     
     // Add hero from hero search page.
     @IBAction func returnedWithNewHeroFromSearch(segue: UIStoryboardSegue) {
-        // Render selected heros
+        renderSelectedHeroes()
+        println("returned from Hero search page after adding hero from search.")
+    }
+    
+    // Render selected hero images.
+    func renderSelectedHeroes() {
         let heroButtonArray = [heroButton0, heroButton1, heroButton2, heroButton3, heroButton4, heroButton5, heroButton6, heroButton7, heroButton8, heroButton9]
         for i in 0...9 {
             if let hero = heroLineup?.heroAt(position: i) {
@@ -109,7 +116,6 @@ class LineupViewController: UIViewController {
                 heroButtonArray[i].setBackgroundImage(UIImage(named: "add_hero.png"), forState: .Normal)
             }
         }
-        println("returned from Hero search page after adding hero from search.")
     }
     
     // MARK: - Navigation
@@ -118,8 +124,8 @@ class LineupViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "lineupToHeroSearchSegue" {
           let destination = segue.destinationViewController as! HeroSearchViewController
-          destination.heroDatabase = heroDatabase
-          destination.heroLineup = heroLineup
+          //destination.heroDatabase = heroDatabase
+          //destination.heroLineup = heroLineup
           destination.touchedHeroButtonID = touchedHeroButtonID
         }
     }

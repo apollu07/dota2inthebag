@@ -21,6 +21,8 @@ class HeroSearchViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        heroDatabase = SingletonDotaHeroDatabase.sharedInstance
+        heroLineup = SingletonHeroLineup.sharedInstance
         searchInput.delegate = self
         // Render hero name and image with the current position's hero if it exists.
         // TODO(lulu): consider if touchedHeroButtonID will ever be invalid
