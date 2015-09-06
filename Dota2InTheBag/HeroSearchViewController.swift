@@ -10,10 +10,11 @@ import UIKit
 
 class HeroSearchViewController: UIViewController, UITextFieldDelegate {
     
-    var heroDatabase: SingletonDotaHeroDatabase?
-    var heroLineup: SingletonHeroLineup?
+    var heroDatabase = SingletonDotaHeroDatabase.sharedInstance
+    var heroLineup = SingletonHeroLineup.sharedInstance
     var touchedHeroButtonID: Int?
     var heroToAdd: DotaHero?
+    var heroType: String?
     
     @IBOutlet weak var searchInput: UITextField!
     @IBOutlet weak var searchResultLabel: UILabel!
@@ -21,12 +22,10 @@ class HeroSearchViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        heroDatabase = SingletonDotaHeroDatabase.sharedInstance
-        heroLineup = SingletonHeroLineup.sharedInstance
         searchInput.delegate = self
         // Render hero name and image with the current position's hero if it exists.
         // TODO(lulu): consider if touchedHeroButtonID will ever be invalid
-        if let currHero = heroLineup?.heroAt(position: touchedHeroButtonID!) {
+        if let currHero = heroLineup.heroAt(position: touchedHeroButtonID!) {
             searchResultLabel.text = currHero.officialName
             searchResultImage.image = UIImage(named: currHero.imageURL)
         } else {
@@ -50,22 +49,34 @@ class HeroSearchViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func searchButtonTouched(sender: AnyObject) {
         searchInput.resignFirstResponder();
-        let heroFound = heroDatabase?.searchForHero(searchInput.text)
+        let heroFound = heroDatabase.searchForHero(searchInput.text)
         displayHero(heroFound)
         if heroFound != nil {
             heroToAdd = heroFound
         }
     }
     @IBAction func addHeroButtonTouched(sender: AnyObject) {
-        heroLineup?.setHeroAt(position: touchedHeroButtonID!, to: heroToAdd)
+        heroLineup.setHeroAt(position: touchedHeroButtonID!, to: heroToAdd)
         performSegueWithIdentifier("addHeroFromSearchSegue", sender: self)
+    }
+    @IBAction func strengthButtonTouched(sender: AnyObject) {
+        heroType = "str"
+        performSegueWithIdentifier("searchToTypeSegue", sender: nil)
+    }
+    @IBAction func agilityButtonTouched(sender: AnyObject) {
+        heroType = "agi"
+        performSegueWithIdentifier("searchToTypeSegue", sender: nil)
+    }
+    @IBAction func intelligenceButtonTouched(sender: AnyObject) {
+        heroType = "int"
+        performSegueWithIdentifier("searchToTypeSegue", sender: nil)
     }
     
     // UITextField delegates.
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         searchInput.resignFirstResponder();
         // TODO(lulu): refactor the code below into a function.
-        let heroFound = heroDatabase?.searchForHero(searchInput.text)
+        let heroFound = heroDatabase.searchForHero(searchInput.text)
         displayHero(heroFound)
         if heroFound != nil {
             heroToAdd = heroFound
@@ -83,14 +94,23 @@ class HeroSearchViewController: UIViewController, UITextFieldDelegate {
             searchResultImage.image = UIImage(named: "unknown_hero.png")
         }
     }
-    /*
+    
     // MARK: - Navigation
+    // Return from hero table view page.
+    @IBAction func returnedFromHeroTable(segue: UIStoryboardSegue) {
+        if segue.identifier == "returnedFromHeroTableSegue" {
+            let origin = segue.sourceViewController as! HeroTableViewController
+            heroToAdd = origin.heroSelected
+            displayHero(heroToAdd)
+        }
+        println("returned from Hero table view page.")
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "searchToTypeSegue" {
+            let destination = segue.destinationViewController as! HeroTableViewController
+            destination.heroType = heroType
+        }
     }
-    */
-
 }

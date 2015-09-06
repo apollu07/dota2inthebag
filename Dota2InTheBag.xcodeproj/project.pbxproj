@@ -10,6 +10,8 @@
 		AF0097191B8ED4DD00B129A6 /* MatchLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */; };
 		AF2799231B99053E00F9B346 /* unknown_hero.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2799221B99053E00F9B346 /* unknown_hero.png */; };
 		AF2799251B993BA200F9B346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2799241B993BA200F9B346 /* Main.storyboard */; };
+		AF3EF6AC1B9CD99900E9A6A0 /* HeroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EF6AB1B9CD99900E9A6A0 /* HeroTableViewController.swift */; };
+		AF3EF6AE1B9CDAD000E9A6A0 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EF6AD1B9CDAD000E9A6A0 /* HeroTableViewCell.swift */; };
 		AF8021641B8F812100BDD529 /* LineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8021631B8F812100BDD529 /* LineupViewController.swift */; };
 		AF96D9B11B93E57A00CCB033 /* HeroSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96D9B01B93E57A00CCB033 /* HeroSearchViewController.swift */; };
 		AFA3104C1B8C21AE001F136D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3104B1B8C21AE001F136D /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 		AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchLevelViewController.swift; sourceTree = "<group>"; };
 		AF2799221B99053E00F9B346 /* unknown_hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown_hero.png; sourceTree = "<group>"; };
 		AF2799241B993BA200F9B346 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AF3EF6AB1B9CD99900E9A6A0 /* HeroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTableViewController.swift; sourceTree = "<group>"; };
+		AF3EF6AD1B9CDAD000E9A6A0 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
 		AF8021631B8F812100BDD529 /* LineupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineupViewController.swift; sourceTree = "<group>"; };
 		AF96D9B01B93E57A00CCB033 /* HeroSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroSearchViewController.swift; sourceTree = "<group>"; };
 		AFA310461B8C21AE001F136D /* Dota2InTheBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2InTheBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +109,8 @@
 				AF8021631B8F812100BDD529 /* LineupViewController.swift */,
 				AF96D9B01B93E57A00CCB033 /* HeroSearchViewController.swift */,
 				AFBBB00E1B9560C400524A11 /* DotaHero.swift */,
+				AF3EF6AB1B9CD99900E9A6A0 /* HeroTableViewController.swift */,
+				AF3EF6AD1B9CDAD000E9A6A0 /* HeroTableViewCell.swift */,
 			);
 			path = Dota2InTheBag;
 			sourceTree = "<group>";
@@ -245,7 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA3104F1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld in Sources */,
+				AF3EF6AC1B9CD99900E9A6A0 /* HeroTableViewController.swift in Sources */,
 				AF8021641B8F812100BDD529 /* LineupViewController.swift in Sources */,
+				AF3EF6AE1B9CDAD000E9A6A0 /* HeroTableViewCell.swift in Sources */,
 				AF0097191B8ED4DD00B129A6 /* MatchLevelViewController.swift in Sources */,
 				AFBBB00F1B9560C400524A11 /* DotaHero.swift in Sources */,
 				AFA3104C1B8C21AE001F136D /* AppDelegate.swift in Sources */,

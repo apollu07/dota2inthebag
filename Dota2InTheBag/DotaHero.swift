@@ -33,7 +33,10 @@ class DotaHero {
 class SingletonDotaHeroDatabase {
     static let sharedInstance = SingletonDotaHeroDatabase()
     
-    var database: [DotaHero] = []
+    var database = [DotaHero]()
+    var strHeroes = [DotaHero]()
+    var agiHeroes = [DotaHero]()
+    var intHeroes = [DotaHero]()
     
     // Hard-coded init function to add all dota heros to the database.
     init() {
@@ -41,6 +44,20 @@ class SingletonDotaHeroDatabase {
         database.append(DotaHero(id: 0, name: "Earthshaker", image: "earthshaker.png", type: "str", names: ["earthshaker", "es", "shaker", "earth shaker"]))
         database.append(DotaHero(id: 1, name: "Sven", image: "sven.png", type: "str", names: ["sven", "seven"]))
         database.append(DotaHero(id: 2, name: "Tiny", image: "tiny.png", type: "str", names: ["tiny"]))
+        
+        // Init heroes of different types.
+        for hero in database {
+            switch hero.heroType {
+            case "str":
+                strHeroes.append(hero)
+            case "agi":
+                agiHeroes.append(hero)
+            case "int":
+                intHeroes.append(hero)
+            default:
+                ()
+            }
+        }
     }
     
     // Search and return dota hero based on the input name.
@@ -53,6 +70,20 @@ class SingletonDotaHeroDatabase {
             }
         }
         return nil
+    }
+    
+    // Get heroes of a specific type.
+    func getHeroesOfType(type: String) -> [DotaHero] {
+        switch type {
+        case "str":
+            return strHeroes
+        case "agi":
+            return agiHeroes
+        case "int":
+            return intHeroes
+        default:
+            return [DotaHero]()
+        }
     }
     
     // Decide if two hero name string matches.

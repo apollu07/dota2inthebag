@@ -11,8 +11,8 @@ import UIKit
 class LineupViewController: UIViewController {
     
     var matchLevel: MatchLevelViewController.MatchLevel?
-    var heroDatabase: SingletonDotaHeroDatabase?
-    var heroLineup: SingletonHeroLineup?
+    var heroDatabase = SingletonDotaHeroDatabase.sharedInstance
+    var heroLineup = SingletonHeroLineup.sharedInstance
         
     @IBOutlet weak var heroButton0: UIButton!
     @IBOutlet weak var heroButton1: UIButton!
@@ -38,9 +38,6 @@ class LineupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        heroDatabase = SingletonDotaHeroDatabase.sharedInstance
-        heroLineup = SingletonHeroLineup.sharedInstance
         
         renderSelectedHeroes()
         
@@ -97,7 +94,7 @@ class LineupViewController: UIViewController {
     
     // Reset all selected heroes.
     @IBAction func resetButtonTouched(sender: AnyObject) {
-        heroLineup?.clear()
+        heroLineup.clear()
         renderSelectedHeroes()
     }
     
@@ -116,7 +113,7 @@ class LineupViewController: UIViewController {
     func renderSelectedHeroes() {
         let heroButtonArray = [heroButton0, heroButton1, heroButton2, heroButton3, heroButton4, heroButton5, heroButton6, heroButton7, heroButton8, heroButton9]
         for i in 0...9 {
-            if let hero = heroLineup?.heroAt(position: i) {
+            if let hero = heroLineup.heroAt(position: i) {
                 heroButtonArray[i].setBackgroundImage(UIImage(named: hero.imageURL), forState: .Normal)
             } else {
                 heroButtonArray[i].setBackgroundImage(UIImage(named: "add_hero.png"), forState: .Normal)
@@ -130,8 +127,6 @@ class LineupViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "lineupToHeroSearchSegue" {
           let destination = segue.destinationViewController as! HeroSearchViewController
-          //destination.heroDatabase = heroDatabase
-          //destination.heroLineup = heroLineup
           destination.touchedHeroButtonID = touchedHeroButtonID
         }
     }

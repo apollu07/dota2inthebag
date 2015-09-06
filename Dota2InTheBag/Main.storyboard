@@ -641,12 +641,18 @@
                                 <state key="normal" title="Strength">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="strengthButtonTouched:" destination="4Xq-GN-DAf" eventType="touchUpInside" id="fWx-an-8JC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xp6-oY-qj5">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Agility">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="agilityButtonTouched:" destination="4Xq-GN-DAf" eventType="touchUpInside" id="ZST-RX-5jV"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unknown_hero.png" translatesAutoresizingMaskIntoConstraints="NO" id="y7c-qp-jaV">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -690,6 +696,9 @@
                                 <state key="normal" title="Intelligence">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="intelligenceButtonTouched:" destination="4Xq-GN-DAf" eventType="touchUpInside" id="zvf-s5-W1i"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -894,12 +903,107 @@
                         <outlet property="searchResultImage" destination="y7c-qp-jaV" id="jHR-K5-tdd"/>
                         <outlet property="searchResultLabel" destination="H1o-ok-sqT" id="NUO-07-W8I"/>
                         <segue destination="nzX-Ia-YXu" kind="unwind" identifier="addHeroFromSearchSegue" unwindAction="returnedWithNewHeroFromSearch:" id="4Pk-7M-hDj"/>
+                        <segue destination="DJZ-Wo-ad8" kind="show" identifier="searchToTypeSegue" id="aMr-Tt-5hv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzQ-fN-Nqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nzX-Ia-YXu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1477.5" y="313.5"/>
+        </scene>
+        <!--Hero Table View Controller-->
+        <scene sceneID="yuQ-lL-bTD">
+            <objects>
+                <tableViewController id="DJZ-Wo-ad8" customClass="HeroTableViewController" customModule="Dota2InTheBag" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="22" sectionFooterHeight="22" id="UBc-Rl-zS9">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeroTableCell" rowHeight="72" id="8yd-qJ-7AV" customClass="HeroTableViewCell" customModule="Dota2InTheBag" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8yd-qJ-7AV" id="1RV-pT-p9f">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7bb-PH-QBc">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="256" id="pXI-ZK-hg5">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="128"/>
+                                                </constraint>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="pXI-ZK-hg5"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="pXI-ZK-hg5"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSk-8j-q8I">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="tSk-8j-q8I" secondAttribute="centerY" id="EsW-jK-YVD"/>
+                                        <constraint firstItem="7bb-PH-QBc" firstAttribute="top" secondItem="1RV-pT-p9f" secondAttribute="top" id="O1y-kw-jb2"/>
+                                        <constraint firstAttribute="bottom" secondItem="7bb-PH-QBc" secondAttribute="bottom" id="cTH-xt-7eG"/>
+                                        <constraint firstItem="7bb-PH-QBc" firstAttribute="leading" secondItem="1RV-pT-p9f" secondAttribute="leading" id="ugx-88-h5k"/>
+                                        <constraint firstItem="tSk-8j-q8I" firstAttribute="leading" secondItem="7bb-PH-QBc" secondAttribute="trailing" id="yk1-j5-iI2">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                                        </constraint>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="7bb-PH-QBc"/>
+                                            <exclude reference="tSk-8j-q8I"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="O1y-kw-jb2"/>
+                                            <exclude reference="cTH-xt-7eG"/>
+                                            <exclude reference="ugx-88-h5k"/>
+                                            <exclude reference="EsW-jK-YVD"/>
+                                            <exclude reference="yk1-j5-iI2"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="7bb-PH-QBc"/>
+                                            <include reference="tSk-8j-q8I"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="O1y-kw-jb2"/>
+                                            <include reference="cTH-xt-7eG"/>
+                                            <include reference="ugx-88-h5k"/>
+                                            <include reference="EsW-jK-YVD"/>
+                                            <include reference="yk1-j5-iI2"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="heroImage" destination="7bb-PH-QBc" id="PbS-dq-SVr"/>
+                                    <outlet property="heroNameLabel" destination="tSk-8j-q8I" id="Nmv-tb-XCA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DJZ-Wo-ad8" id="8QB-Wb-TcL"/>
+                            <outlet property="delegate" destination="DJZ-Wo-ad8" id="XIt-mB-yQS"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="mQx-md-QcX" kind="unwind" identifier="returnedFromHeroTableSegue" unwindAction="returnedFromHeroTable:" id="c40-aA-LQT"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lpb-Yq-aPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="mQx-md-QcX" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2160" y="313.5"/>
         </scene>
     </scenes>
     <resources>

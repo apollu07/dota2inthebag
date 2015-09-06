@@ -15,15 +15,13 @@ class MatchLevelViewController: UIViewController {
     }
     
     var matchLevel: MatchLevel?
-    var heroLineup: SingletonHeroLineup?
-    var heroDatabase: SingletonDotaHeroDatabase?
+    var heroLineup = SingletonHeroLineup.sharedInstance
+    var heroDatabase = SingletonDotaHeroDatabase.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        heroDatabase = SingletonDotaHeroDatabase.sharedInstance
-        heroLineup = SingletonHeroLineup.sharedInstance
     }
 
     override func didReceiveMemoryWarning() {
