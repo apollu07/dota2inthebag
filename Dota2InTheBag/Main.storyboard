@@ -998,7 +998,8 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="mQx-md-QcX" kind="unwind" identifier="returnedFromHeroTableSegue" unwindAction="returnedFromHeroTable:" id="c40-aA-LQT"/>
+                        <segue destination="mQx-md-QcX" kind="unwind" identifier="returnedFromHeroTableToHeroSearchSegue" unwindAction="returnedFromHeroTableToHeroSearch:" id="8Hd-pb-xSU"/>
+                        <segue destination="mQx-md-QcX" kind="unwind" identifier="returnedFromHeroTableToLineupSegue" unwindAction="returnedFromHeroTableToLineup:" id="Imy-3H-oE0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lpb-Yq-aPL" userLabel="First Responder" sceneMemberID="firstResponder"/>

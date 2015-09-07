@@ -28,6 +28,7 @@ class HeroSearchViewController: UIViewController, UITextFieldDelegate {
         if let currHero = heroLineup.heroAt(position: touchedHeroButtonID!) {
             searchResultLabel.text = currHero.officialName
             searchResultImage.image = UIImage(named: currHero.imageURL)
+            heroToAdd = currHero
         } else {
             searchResultLabel.text = ""
             searchResultImage.image = UIImage(named: "unknown_hero.png")
@@ -97,12 +98,7 @@ class HeroSearchViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Navigation
     // Return from hero table view page.
-    @IBAction func returnedFromHeroTable(segue: UIStoryboardSegue) {
-        if segue.identifier == "returnedFromHeroTableSegue" {
-            let origin = segue.sourceViewController as! HeroTableViewController
-            heroToAdd = origin.heroSelected
-            displayHero(heroToAdd)
-        }
+    @IBAction func returnedFromHeroTableToHeroSearch(segue: UIStoryboardSegue) {
         println("returned from Hero table view page.")
     }
 

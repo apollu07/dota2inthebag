@@ -60,6 +60,7 @@ class HeroTableViewController: UITableViewController, UITableViewDelegate {
             cell.heroNameLabel.text = heroesOfCurrentType[row].officialName
         } else {
             // Return button
+            cell.heroImage.image = UIImage(named: "back.png")
             cell.heroNameLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption2)
             cell.heroNameLabel.text = "return to hero search"
         }
@@ -70,10 +71,11 @@ class HeroTableViewController: UITableViewController, UITableViewDelegate {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row < heroesOfCurrentType.count {
             heroSelected = heroesOfCurrentType[indexPath.row]
+            self.performSegueWithIdentifier("returnedFromHeroTableToLineupSegue", sender: self)
         } else {
             heroSelected = nil
+            self.performSegueWithIdentifier("returnedFromHeroTableToHeroSearchSegue", sender: self)
         }
-        self.performSegueWithIdentifier("returnedFromHeroTableSegue", sender: self)
     }
 
     /*

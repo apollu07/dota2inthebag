@@ -31,6 +31,7 @@
 		AF5E87F41B9E008000849980 /* lina.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5E87EB1B9E008000849980 /* lina.png */; };
 		AF5E87F51B9E008000849980 /* zuus.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5E87EC1B9E008000849980 /* zuus.png */; };
 		AF5E87F61B9E008000849980 /* windrunner.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5E87ED1B9E008000849980 /* windrunner.png */; };
+		AF5E87F81B9E022B00849980 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5E87F71B9E022B00849980 /* back.png */; };
 		AF8021641B8F812100BDD529 /* LineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8021631B8F812100BDD529 /* LineupViewController.swift */; };
 		AF96D9B11B93E57A00CCB033 /* HeroSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96D9B01B93E57A00CCB033 /* HeroSearchViewController.swift */; };
 		AFA3104C1B8C21AE001F136D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3104B1B8C21AE001F136D /* AppDelegate.swift */; };
@@ -87,6 +88,7 @@
 		AF5E87EB1B9E008000849980 /* lina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lina.png; sourceTree = "<group>"; };
 		AF5E87EC1B9E008000849980 /* zuus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zuus.png; sourceTree = "<group>"; };
 		AF5E87ED1B9E008000849980 /* windrunner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windrunner.png; sourceTree = "<group>"; };
+		AF5E87F71B9E022B00849980 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		AF8021631B8F812100BDD529 /* LineupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineupViewController.swift; sourceTree = "<group>"; };
 		AF96D9B01B93E57A00CCB033 /* HeroSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroSearchViewController.swift; sourceTree = "<group>"; };
 		AFA310461B8C21AE001F136D /* Dota2InTheBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2InTheBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 				AFA9DA111B9D2D0900B1EEAF /* tiny.png */,
 				AFA9DA121B9D2D0900B1EEAF /* vengefulspirit.png */,
 				AF3EF6AF1B9CF55900E9A6A0 /* bloodseeker.png */,
+				AF5E87F71B9E022B00849980 /* back.png */,
 				AF3EF6B01B9CF55900E9A6A0 /* bane.png */,
 				AF3EF6B11B9CF55900E9A6A0 /* crystal_maiden.png */,
 				AF3EF6B21B9CF55900E9A6A0 /* axe.png */,
@@ -314,6 +317,7 @@
 				AF3EF6BE1B9CF73500E9A6A0 /* juggernaut.png in Resources */,
 				AFA9DA0C1B9D00B800B1EEAF /* nevermore.png in Resources */,
 				AF3EF6C01B9CF73500E9A6A0 /* mirana.png in Resources */,
+				AF5E87F81B9E022B00849980 /* back.png in Resources */,
 				AF5E87F31B9E008000849980 /* witch_doctor.png in Resources */,
 				AF3EF6B51B9CF55900E9A6A0 /* bloodseeker.png in Resources */,
 				AFA9DA131B9D2D0900B1EEAF /* razor.png in Resources */,

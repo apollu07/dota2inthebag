@@ -102,6 +102,15 @@ class LineupViewController: UIViewController {
     @IBAction func returned(segue: UIStoryboardSegue) {
         println("returned from Hero search page.")
     }
+    // Return from hero table page.
+    @IBAction func returnedFromHeroTableToLineup(segue: UIStoryboardSegue) {
+        if segue.identifier == "returnedFromHeroTableToLineupSegue" {
+            let origin = segue.sourceViewController as! HeroTableViewController
+            heroLineup.setHeroAt(position: touchedHeroButtonID!, to: origin.heroSelected)
+            renderSelectedHeroes()
+        }
+        println("returned from Hero table page.")
+    }
     
     // Add hero from hero search page.
     @IBAction func returnedWithNewHeroFromSearch(segue: UIStoryboardSegue) {
