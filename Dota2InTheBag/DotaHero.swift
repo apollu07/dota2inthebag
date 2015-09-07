@@ -61,7 +61,17 @@ class SingletonDotaHeroDatabase {
         database.append(DotaHero(id: 18, name: "Sven", image: "sven.png", type: "str", names: ["sven"]))
         database.append(DotaHero(id: 19, name: "Tiny", image: "tiny.png", type: "str", names: ["tiny"]))
         database.append(DotaHero(id: 20, name: "Vengeful Spirit", image: "vengefulspirit.png", type: "agi", names: ["vengeful spirit", "vengefulspirit", "vs", "venge"]))
-        // noto: no 24
+        database.append(DotaHero(id: 21, name: "Windranger", image: "windrunner.png", type: "int", names: ["windranger", "wr", "wind", "windrunner", "wind ranger", "wind runner"]))
+        database.append(DotaHero(id: 22, name: "Zeus", image: "zuus.png", type: "int", names: ["zeus"]))
+        database.append(DotaHero(id: 23, name: "Kunkka", image: "kunkka.png", type: "str", names: ["kunkka"]))
+        database.append(DotaHero(id: 24, name: "", image: "", type: "", names: [""]))
+        database.append(DotaHero(id: 25, name: "Lina", image: "lina.png", type: "int", names: ["lina"]))
+        database.append(DotaHero(id: 26, name: "Lion", image: "lion.png", type: "int", names: ["lion"]))
+        database.append(DotaHero(id: 27, name: "Shadow Shaman", image: "shadow_shaman.png", type: "int", names: ["shadow shaman", "shadowshaman", "shaman"]))
+        database.append(DotaHero(id: 28, name: "Slardar", image: "slardar.png", type: "str", names: ["slardar"]))
+        database.append(DotaHero(id: 29, name: "Tidehunter", image: "tidehunter.png", type: "str", names: ["tidehunter", "tide", "th", "tide hunter"]))
+        database.append(DotaHero(id: 30, name: "Witch Doctor", image: "witch_doctor.png", type: "int", names: ["witch doctor", "wd"]))
+        // Note: no 108
         
         // Init heroes of different types.
         for hero in database {
