@@ -29,6 +29,16 @@
 		AFA310561B8C21AE001F136D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA310551B8C21AE001F136D /* Images.xcassets */; };
 		AFA310591B8C21AE001F136D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA310571B8C21AE001F136D /* LaunchScreen.xib */; };
 		AFA310651B8C21AE001F136D /* Dota2InTheBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA310641B8C21AE001F136D /* Dota2InTheBagTests.swift */; };
+		AFA9DA091B9D00B800B1EEAF /* puck.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA9DA051B9D00B800B1EEAF /* puck.png */; };
+		AFA9DA0A1B9D00B800B1EEAF /* pudge.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA9DA061B9D00B800B1EEAF /* pudge.png */; };
+		AFA9DA0B1B9D00B800B1EEAF /* phantom_lancer.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA9DA071B9D00B800B1EEAF /* phantom_lancer.png */; };
+		AFA9DA0C1B9D00B800B1EEAF /* nevermore.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA9DA081B9D00B800B1EEAF /* nevermore.png */; };
+		AFA9DA131B9D2D0900B1EEAF /* razor.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA9DA0D1B9D2D0900B1EEAF /* razor.png */; };
+		AFA9DA141B9D2D0900B1EEAF /* sven.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA9DA0E1B9D2D0900B1EEAF /* sven.png */; };
+		AFA9DA151B9D2D0900B1EEAF /* sand_king.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA9DA0F1B9D2D0900B1EEAF /* sand_king.png */; };
+		AFA9DA161B9D2D0900B1EEAF /* storm_spirit.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA9DA101B9D2D0900B1EEAF /* storm_spirit.png */; };
+		AFA9DA171B9D2D0900B1EEAF /* tiny.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA9DA111B9D2D0900B1EEAF /* tiny.png */; };
+		AFA9DA181B9D2D0900B1EEAF /* vengefulspirit.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA9DA121B9D2D0900B1EEAF /* vengefulspirit.png */; };
 		AFBBB00F1B9560C400524A11 /* DotaHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBBB00E1B9560C400524A11 /* DotaHero.swift */; };
 		AFBBB0111B95674E00524A11 /* add_hero.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBBB0101B95674E00524A11 /* add_hero.png */; };
 /* End PBXBuildFile section */
@@ -70,6 +80,16 @@
 		AFA3105E1B8C21AE001F136D /* Dota2InTheBagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dota2InTheBagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA310631B8C21AE001F136D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFA310641B8C21AE001F136D /* Dota2InTheBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dota2InTheBagTests.swift; sourceTree = "<group>"; };
+		AFA9DA051B9D00B800B1EEAF /* puck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puck.png; sourceTree = "<group>"; };
+		AFA9DA061B9D00B800B1EEAF /* pudge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pudge.png; sourceTree = "<group>"; };
+		AFA9DA071B9D00B800B1EEAF /* phantom_lancer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phantom_lancer.png; sourceTree = "<group>"; };
+		AFA9DA081B9D00B800B1EEAF /* nevermore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nevermore.png; sourceTree = "<group>"; };
+		AFA9DA0D1B9D2D0900B1EEAF /* razor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = razor.png; sourceTree = "<group>"; };
+		AFA9DA0E1B9D2D0900B1EEAF /* sven.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sven.png; sourceTree = "<group>"; };
+		AFA9DA0F1B9D2D0900B1EEAF /* sand_king.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sand_king.png; sourceTree = "<group>"; };
+		AFA9DA101B9D2D0900B1EEAF /* storm_spirit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = storm_spirit.png; sourceTree = "<group>"; };
+		AFA9DA111B9D2D0900B1EEAF /* tiny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiny.png; sourceTree = "<group>"; };
+		AFA9DA121B9D2D0900B1EEAF /* vengefulspirit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vengefulspirit.png; sourceTree = "<group>"; };
 		AFBBB00E1B9560C400524A11 /* DotaHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotaHero.swift; sourceTree = "<group>"; };
 		AFBBB0101B95674E00524A11 /* add_hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_hero.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +152,12 @@
 		AFA310491B8C21AE001F136D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AFA9DA0D1B9D2D0900B1EEAF /* razor.png */,
+				AFA9DA0E1B9D2D0900B1EEAF /* sven.png */,
+				AFA9DA0F1B9D2D0900B1EEAF /* sand_king.png */,
+				AFA9DA101B9D2D0900B1EEAF /* storm_spirit.png */,
+				AFA9DA111B9D2D0900B1EEAF /* tiny.png */,
+				AFA9DA121B9D2D0900B1EEAF /* vengefulspirit.png */,
 				AF3EF6AF1B9CF55900E9A6A0 /* bloodseeker.png */,
 				AF3EF6B01B9CF55900E9A6A0 /* bane.png */,
 				AF3EF6B11B9CF55900E9A6A0 /* crystal_maiden.png */,
@@ -140,6 +166,10 @@
 				AF3EF6B41B9CF55900E9A6A0 /* antimage.png */,
 				AF3EF6BB1B9CF73500E9A6A0 /* juggernaut.png */,
 				AF3EF6BC1B9CF73500E9A6A0 /* earthshaker.png */,
+				AFA9DA051B9D00B800B1EEAF /* puck.png */,
+				AFA9DA061B9D00B800B1EEAF /* pudge.png */,
+				AFA9DA071B9D00B800B1EEAF /* phantom_lancer.png */,
+				AFA9DA081B9D00B800B1EEAF /* nevermore.png */,
 				AF3EF6BD1B9CF73500E9A6A0 /* mirana.png */,
 				AF3EF6C11B9CF7AB00E9A6A0 /* morphling.png */,
 				AFBBB0101B95674E00524A11 /* add_hero.png */,
@@ -248,19 +278,29 @@
 			files = (
 				AF3EF6B91B9CF55900E9A6A0 /* drow_ranger.png in Resources */,
 				AF2799231B99053E00F9B346 /* unknown_hero.png in Resources */,
+				AFA9DA141B9D2D0900B1EEAF /* sven.png in Resources */,
 				AF3EF6BA1B9CF55900E9A6A0 /* antimage.png in Resources */,
 				AFBBB0111B95674E00524A11 /* add_hero.png in Resources */,
 				AF3EF6BF1B9CF73500E9A6A0 /* earthshaker.png in Resources */,
 				AF2799251B993BA200F9B346 /* Main.storyboard in Resources */,
 				AF3EF6BE1B9CF73500E9A6A0 /* juggernaut.png in Resources */,
+				AFA9DA0C1B9D00B800B1EEAF /* nevermore.png in Resources */,
 				AF3EF6C01B9CF73500E9A6A0 /* mirana.png in Resources */,
 				AF3EF6B51B9CF55900E9A6A0 /* bloodseeker.png in Resources */,
+				AFA9DA131B9D2D0900B1EEAF /* razor.png in Resources */,
 				AF3EF6C21B9CF7AB00E9A6A0 /* morphling.png in Resources */,
 				AF3EF6B71B9CF55900E9A6A0 /* crystal_maiden.png in Resources */,
+				AFA9DA181B9D2D0900B1EEAF /* vengefulspirit.png in Resources */,
 				AF3EF6B61B9CF55900E9A6A0 /* bane.png in Resources */,
 				AF3EF6B81B9CF55900E9A6A0 /* axe.png in Resources */,
+				AFA9DA151B9D2D0900B1EEAF /* sand_king.png in Resources */,
+				AFA9DA161B9D2D0900B1EEAF /* storm_spirit.png in Resources */,
+				AFA9DA0A1B9D00B800B1EEAF /* pudge.png in Resources */,
 				AFA310591B8C21AE001F136D /* LaunchScreen.xib in Resources */,
+				AFA9DA091B9D00B800B1EEAF /* puck.png in Resources */,
+				AFA9DA0B1B9D00B800B1EEAF /* phantom_lancer.png in Resources */,
 				AFA310561B8C21AE001F136D /* Images.xcassets in Resources */,
+				AFA9DA171B9D2D0900B1EEAF /* tiny.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
