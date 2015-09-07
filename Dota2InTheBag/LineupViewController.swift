@@ -98,24 +98,9 @@ class LineupViewController: UIViewController {
         renderSelectedHeroes()
     }
     
-    // Return from hero search page.
-    @IBAction func returned(segue: UIStoryboardSegue) {
-        println("returned from Hero search page.")
-    }
-    // Return from hero table page.
-    @IBAction func returnedFromHeroTableToLineup(segue: UIStoryboardSegue) {
-        if segue.identifier == "returnedFromHeroTableToLineupSegue" {
-            let origin = segue.sourceViewController as! HeroTableViewController
-            heroLineup.setHeroAt(position: touchedHeroButtonID!, to: origin.heroSelected)
-            renderSelectedHeroes()
-        }
-        println("returned from Hero table page.")
-    }
-    
-    // Add hero from hero search page.
-    @IBAction func returnedWithNewHeroFromSearch(segue: UIStoryboardSegue) {
-        renderSelectedHeroes()
-        println("returned from Hero search page after adding hero from search.")
+    // Pick hero based on current lineup
+    @IBAction func pickButtonTouched(sender: AnyObject) {
+        performSegueWithIdentifier("lineupToPickResultSegue", sender: nil)
     }
     
     // Render selected hero images.
@@ -131,12 +116,38 @@ class LineupViewController: UIViewController {
     }
     
     // MARK: - Navigation
+    
+    // Return from hero search page.
+    @IBAction func returned(segue: UIStoryboardSegue) {
+        println("returned from Hero search page.")
+    }
+    // Return from hero table page.
+    @IBAction func returnedFromHeroTableToLineup(segue: UIStoryboardSegue) {
+        if segue.identifier == "returnedFromHeroTableToLineupSegue" {
+            let origin = segue.sourceViewController as! HeroTableViewController
+            heroLineup.setHeroAt(position: touchedHeroButtonID!, to: origin.heroSelected)
+            renderSelectedHeroes()
+        }
+        println("returned from Hero table page.")
+    }
+    // Add hero from hero search page.
+    @IBAction func returnedWithNewHeroFromSearch(segue: UIStoryboardSegue) {
+        renderSelectedHeroes()
+        println("returned from Hero search page after adding hero from search.")
+    }
+    // Return from pick result page.
+    @IBAction func returnedFromPickResult(segue: UIStoryboardSegue) {
+        println("returned from pick result page.")
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "lineupToHeroSearchSegue" {
           let destination = segue.destinationViewController as! HeroSearchViewController
           destination.touchedHeroButtonID = touchedHeroButtonID
+        } else if segue.identifier == "lineupToPickResultSegue" {
+            let destination = segue.destinationViewController as! PickResultViewController
+            destination.matchLevel = matchLevel
         }
     }
 

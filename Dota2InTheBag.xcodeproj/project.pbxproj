@@ -34,6 +34,7 @@
 		AF5E87F81B9E022B00849980 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5E87F71B9E022B00849980 /* back.png */; };
 		AF8021641B8F812100BDD529 /* LineupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8021631B8F812100BDD529 /* LineupViewController.swift */; };
 		AF96D9B11B93E57A00CCB033 /* HeroSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96D9B01B93E57A00CCB033 /* HeroSearchViewController.swift */; };
+		AF96EE621B9E158A007994E9 /* PickResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96EE611B9E158A007994E9 /* PickResultViewController.swift */; };
 		AFA3104C1B8C21AE001F136D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3104B1B8C21AE001F136D /* AppDelegate.swift */; };
 		AFA3104F1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFA3104D1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld */; };
 		AFA310561B8C21AE001F136D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA310551B8C21AE001F136D /* Images.xcassets */; };
@@ -91,6 +92,7 @@
 		AF5E87F71B9E022B00849980 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		AF8021631B8F812100BDD529 /* LineupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineupViewController.swift; sourceTree = "<group>"; };
 		AF96D9B01B93E57A00CCB033 /* HeroSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroSearchViewController.swift; sourceTree = "<group>"; };
+		AF96EE611B9E158A007994E9 /* PickResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickResultViewController.swift; sourceTree = "<group>"; };
 		AFA310461B8C21AE001F136D /* Dota2InTheBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2InTheBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA3104A1B8C21AE001F136D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFA3104B1B8C21AE001F136D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				AFBBB00E1B9560C400524A11 /* DotaHero.swift */,
 				AF3EF6AB1B9CD99900E9A6A0 /* HeroTableViewController.swift */,
 				AF3EF6AD1B9CDAD000E9A6A0 /* HeroTableViewCell.swift */,
+				AF96EE611B9E158A007994E9 /* PickResultViewController.swift */,
 			);
 			path = Dota2InTheBag;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF96EE621B9E158A007994E9 /* PickResultViewController.swift in Sources */,
 				AFA3104F1B8C21AE001F136D /* Dota2InTheBag.xcdatamodeld in Sources */,
 				AF3EF6AC1B9CD99900E9A6A0 /* HeroTableViewController.swift in Sources */,
 				AF8021641B8F812100BDD529 /* LineupViewController.swift in Sources */,

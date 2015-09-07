@@ -421,6 +421,9 @@
                                         <state key="normal" title="Pick">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="pickButtonTouched:" destination="ef6-Oo-i4v" eventType="touchUpInside" id="25N-Rm-Ohy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -573,12 +576,191 @@
                         <outlet property="heroButton8" destination="OpW-Sa-Dqp" id="8Ku-qq-cFg"/>
                         <outlet property="heroButton9" destination="crJ-C6-5VY" id="fzp-TX-69U"/>
                         <segue destination="4Xq-GN-DAf" kind="show" identifier="lineupToHeroSearchSegue" id="Wl4-YB-p0Y"/>
+                        <segue destination="kMb-Hx-5Cc" kind="show" identifier="lineupToPickResultSegue" id="DLS-HO-0T1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwD-Qs-sW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fHQ-iK-cle" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="787.5" y="313.5"/>
+        </scene>
+        <!--Pick Result View Controller-->
+        <scene sceneID="3I8-S2-eWi">
+            <objects>
+                <viewController id="kMb-Hx-5Cc" customClass="PickResultViewController" customModule="Dota2InTheBag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JlG-CP-5Hb"/>
+                        <viewControllerLayoutGuide type="bottom" id="98C-3r-Znd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hzm-aL-D8z">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvl-Jq-LRE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTouched:" destination="kMb-Hx-5Cc" eventType="touchUpInside" id="Beg-Nn-aio"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggested Counter Pick" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t95-Lw-6Gk">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phantom Lancer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubA-gr-zxn">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sand King" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lob-or-r0t">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phantom_lancer.png" translatesAutoresizingMaskIntoConstraints="NO" id="cJh-so-2EL">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="2zn-r3-q18"/>
+                                    <constraint firstAttribute="width" constant="256" id="ENj-Fn-mjT"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2zn-r3-q18"/>
+                                        <exclude reference="ENj-Fn-mjT"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2zn-r3-q18"/>
+                                        <include reference="ENj-Fn-mjT"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other good options" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKC-Yb-YsB">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiny, Vengeful Spirit, Antimage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQK-ZR-kpo">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sand_king.png" translatesAutoresizingMaskIntoConstraints="NO" id="b15-je-2wE">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="MIN-4P-V4N"/>
+                                    <constraint firstAttribute="height" constant="144" id="Rzh-od-7BW"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Rzh-od-7BW"/>
+                                        <exclude reference="MIN-4P-V4N"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Rzh-od-7BW"/>
+                                        <include reference="MIN-4P-V4N"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dvl-Jq-LRE" firstAttribute="leading" secondItem="hzm-aL-D8z" secondAttribute="leadingMargin" constant="8" id="6Ey-JN-T0N"/>
+                            <constraint firstItem="98C-3r-Znd" firstAttribute="top" secondItem="dvl-Jq-LRE" secondAttribute="bottom" constant="16" id="7Jf-CM-NiJ"/>
+                            <constraint firstItem="ubA-gr-zxn" firstAttribute="top" secondItem="t95-Lw-6Gk" secondAttribute="bottom" constant="16" id="7Rs-rI-cWm"/>
+                            <constraint firstItem="t95-Lw-6Gk" firstAttribute="top" secondItem="JlG-CP-5Hb" secondAttribute="bottom" constant="8" id="C6u-PY-WTH"/>
+                            <constraint firstItem="Lob-or-r0t" firstAttribute="top" secondItem="cJh-so-2EL" secondAttribute="bottom" constant="16" id="EX1-uh-3gy"/>
+                            <constraint firstItem="jQK-ZR-kpo" firstAttribute="top" secondItem="mKC-Yb-YsB" secondAttribute="bottom" constant="16" id="L6w-8d-fJq"/>
+                            <constraint firstAttribute="centerX" secondItem="ubA-gr-zxn" secondAttribute="centerX" id="T0f-4Y-e9X"/>
+                            <constraint firstAttribute="centerX" secondItem="jQK-ZR-kpo" secondAttribute="centerX" id="WHW-Xe-erR"/>
+                            <constraint firstAttribute="centerX" secondItem="mKC-Yb-YsB" secondAttribute="centerX" id="bsa-lQ-xjj"/>
+                            <constraint firstItem="b15-je-2wE" firstAttribute="top" secondItem="Lob-or-r0t" secondAttribute="bottom" constant="8" id="dCQ-H8-wrk"/>
+                            <constraint firstAttribute="centerX" secondItem="Lob-or-r0t" secondAttribute="centerX" id="etS-VI-ZWk"/>
+                            <constraint firstAttribute="centerX" secondItem="b15-je-2wE" secondAttribute="centerX" id="hrj-TV-WGp"/>
+                            <constraint firstItem="cJh-so-2EL" firstAttribute="top" secondItem="ubA-gr-zxn" secondAttribute="bottom" constant="8" id="lC7-cE-xsl"/>
+                            <constraint firstAttribute="centerX" secondItem="cJh-so-2EL" secondAttribute="centerX" id="qMx-z7-HTf"/>
+                            <constraint firstAttribute="centerX" secondItem="t95-Lw-6Gk" secondAttribute="centerX" id="qWW-2W-O3V"/>
+                            <constraint firstItem="mKC-Yb-YsB" firstAttribute="top" secondItem="b15-je-2wE" secondAttribute="bottom" constant="16" id="whT-1M-VSC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="dvl-Jq-LRE"/>
+                                <exclude reference="t95-Lw-6Gk"/>
+                                <exclude reference="ubA-gr-zxn"/>
+                                <exclude reference="Lob-or-r0t"/>
+                                <exclude reference="cJh-so-2EL"/>
+                                <exclude reference="mKC-Yb-YsB"/>
+                                <exclude reference="jQK-ZR-kpo"/>
+                                <exclude reference="b15-je-2wE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="C6u-PY-WTH"/>
+                                <exclude reference="qWW-2W-O3V"/>
+                                <exclude reference="lC7-cE-xsl"/>
+                                <exclude reference="qMx-z7-HTf"/>
+                                <exclude reference="7Rs-rI-cWm"/>
+                                <exclude reference="T0f-4Y-e9X"/>
+                                <exclude reference="EX1-uh-3gy"/>
+                                <exclude reference="etS-VI-ZWk"/>
+                                <exclude reference="dCQ-H8-wrk"/>
+                                <exclude reference="hrj-TV-WGp"/>
+                                <exclude reference="bsa-lQ-xjj"/>
+                                <exclude reference="whT-1M-VSC"/>
+                                <exclude reference="L6w-8d-fJq"/>
+                                <exclude reference="WHW-Xe-erR"/>
+                                <exclude reference="6Ey-JN-T0N"/>
+                                <exclude reference="7Jf-CM-NiJ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="dvl-Jq-LRE"/>
+                                <include reference="t95-Lw-6Gk"/>
+                                <include reference="ubA-gr-zxn"/>
+                                <include reference="Lob-or-r0t"/>
+                                <include reference="cJh-so-2EL"/>
+                                <include reference="mKC-Yb-YsB"/>
+                                <include reference="jQK-ZR-kpo"/>
+                                <include reference="b15-je-2wE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="C6u-PY-WTH"/>
+                                <include reference="qWW-2W-O3V"/>
+                                <include reference="lC7-cE-xsl"/>
+                                <include reference="qMx-z7-HTf"/>
+                                <include reference="7Rs-rI-cWm"/>
+                                <include reference="T0f-4Y-e9X"/>
+                                <include reference="EX1-uh-3gy"/>
+                                <include reference="etS-VI-ZWk"/>
+                                <include reference="dCQ-H8-wrk"/>
+                                <include reference="hrj-TV-WGp"/>
+                                <include reference="bsa-lQ-xjj"/>
+                                <include reference="whT-1M-VSC"/>
+                                <include reference="L6w-8d-fJq"/>
+                                <include reference="WHW-Xe-erR"/>
+                                <include reference="6Ey-JN-T0N"/>
+                                <include reference="7Jf-CM-NiJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <segue destination="1un-xU-VQI" kind="unwind" identifier="returnedFromPickResultSegue" unwindAction="returnedFromPickResult:" id="Ysq-Op-26t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SsZ-dY-zch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1un-xU-VQI" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="-581"/>
         </scene>
         <!--Hero Search View Controller-->
         <scene sceneID="th4-Pa-iH4">
@@ -1010,6 +1192,8 @@
     </scenes>
     <resources>
         <image name="add_hero.png" width="256" height="144"/>
+        <image name="phantom_lancer.png" width="256" height="144"/>
+        <image name="sand_king.png" width="256" height="144"/>
         <image name="unknown_hero.png" width="256" height="144"/>
     </resources>
 </document>
