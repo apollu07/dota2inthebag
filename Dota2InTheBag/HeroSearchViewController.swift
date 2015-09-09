@@ -8,31 +8,24 @@
 
 import UIKit
 
-class HeroSearchViewController: UIViewController, UITextFieldDelegate {
+class HeroSearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     var heroDatabase = SingletonDotaHeroDatabase.sharedInstance
     var heroLineup = SingletonHeroLineup.sharedInstance
     var touchedHeroButtonID: Int?
-    var heroToAdd: DotaHero?
-    var heroType: String?
+    var filteredHeroes = [DotaHero]()
+    var searchActive : Bool = false
+    var tap: UITapGestureRecognizer!
     
-    @IBOutlet weak var searchInput: UITextField!
-    @IBOutlet weak var searchResultLabel: UILabel!
-    @IBOutlet weak var searchResultImage: UIImageView!
-
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchInput.delegate = self
-        // Render hero name and image with the current position's hero if it exists.
-        // TODO(lulu): consider if touchedHeroButtonID will ever be invalid
-        if let currHero = heroLineup.heroAt(position: touchedHeroButtonID!) {
-            searchResultLabel.text = currHero.officialName
-            searchResultImage.image = UIImage(named: currHero.imageURL)
-            heroToAdd = currHero
-        } else {
-            searchResultLabel.text = ""
-            searchResultImage.image = UIImage(named: "unknown_hero.png")
-        }
+        tableView.dataSource = self
+        tableView.delegate = self
+        searchBar.delegate = self
+        tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,59 +33,93 @@ class HeroSearchViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        searchInput.endEditing(true)
+    // Table related functions.
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // Return the number of sections.
+        return 1
     }
     
-    // Actions
-    @IBAction func clearButtonTouched(sender: AnyObject) {
-        searchInput.text = nil
-    }
-    @IBAction func searchButtonTouched(sender: AnyObject) {
-        searchInput.resignFirstResponder();
-        let heroFound = heroDatabase.searchForHero(searchInput.text)
-        displayHero(heroFound)
-        if heroFound != nil {
-            heroToAdd = heroFound
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Return the number of rows in the section.
+        if searchActive == true {
+            return filteredHeroes.count
         }
-    }
-    @IBAction func addHeroButtonTouched(sender: AnyObject) {
-        heroLineup.setHeroAt(position: touchedHeroButtonID!, to: heroToAdd)
-        performSegueWithIdentifier("addHeroFromSearchSegue", sender: self)
-    }
-    @IBAction func strengthButtonTouched(sender: AnyObject) {
-        heroType = "str"
-        performSegueWithIdentifier("searchToTypeSegue", sender: nil)
-    }
-    @IBAction func agilityButtonTouched(sender: AnyObject) {
-        heroType = "agi"
-        performSegueWithIdentifier("searchToTypeSegue", sender: nil)
-    }
-    @IBAction func intelligenceButtonTouched(sender: AnyObject) {
-        heroType = "int"
-        performSegueWithIdentifier("searchToTypeSegue", sender: nil)
+        return heroDatabase.database.count + 1
     }
     
-    // UITextField delegates.
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        searchInput.resignFirstResponder();
-        // TODO(lulu): refactor the code below into a function.
-        let heroFound = heroDatabase.searchForHero(searchInput.text)
-        displayHero(heroFound)
-        if heroFound != nil {
-            heroToAdd = heroFound
-        }
-        return true;
-    }
-    
-    // Display hero's official name and image given a hero ID.
-    func displayHero(hero: DotaHero?) {
-        if let currHero = hero {
-            searchResultLabel.text = currHero.officialName
-            searchResultImage.image = UIImage(named: currHero.imageURL)
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("HeroTableCell", forIndexPath: indexPath) as! HeroTableViewCell
+        
+        // Configure the cell...
+        let row = indexPath.row
+        var heroes: [DotaHero]!
+        if searchActive == true {
+            heroes = filteredHeroes
         } else {
-            searchResultLabel.text = "Invalid hero name. Please try again."
-            searchResultImage.image = UIImage(named: "unknown_hero.png")
+            heroes = heroDatabase.database
+        }
+        if !searchActive && row == heroDatabase.database.count {
+            // Return button
+            cell.heroImage.image = UIImage(named: "back.png")
+            cell.heroNameLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption2)
+            cell.heroNameLabel.text = "return to lineup"
+        } else {
+            cell.heroImage.image = UIImage(named: heroes[row].imageURL)
+            cell.heroNameLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption2)
+            cell.heroNameLabel.text = heroes[row].officialName
+        }
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var heroes: [DotaHero]!
+        if searchActive == true {
+            heroes = filteredHeroes
+        } else {
+            heroes = heroDatabase.database
+        }
+        let row = indexPath.row
+        if !searchActive && row == heroDatabase.database.count {
+            self.performSegueWithIdentifier("returnedSegue", sender: self)
+        } else {
+            heroLineup.setHeroAt(position: touchedHeroButtonID!, to: heroes[indexPath.row])
+            self.performSegueWithIdentifier("returnedWithNewHeroFromSearchSegue", sender: self)
+            
+        }
+    }
+
+    
+    // Functions for search bar.
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchActive = true;
+        view.addGestureRecognizer(tap)
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if !searchText.isEmpty {
+            view.removeGestureRecognizer(tap)
+        } else {
+            view.addGestureRecognizer(tap)
+        }
+        filteredHeroes.removeAll(keepCapacity: false)
+        for hero in heroDatabase.database {
+            for name in hero.allNames {
+                if name.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch) != nil {
+                    filteredHeroes.append(hero)
+                    break
+                }
+            }
+        }
+        self.tableView.reloadData()
+    }
+    
+    func dismissKeyboard() {
+        searchBar.resignFirstResponder()
+        view.removeGestureRecognizer(tap)
+        if filteredHeroes.count == 0 {
+            self.searchActive = false
+            self.tableView.reloadData()
         }
     }
     
@@ -100,13 +127,5 @@ class HeroSearchViewController: UIViewController, UITextFieldDelegate {
     // Return from hero table view page.
     @IBAction func returnedFromHeroTableToHeroSearch(segue: UIStoryboardSegue) {
         println("returned from Hero table view page.")
-    }
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "searchToTypeSegue" {
-            let destination = segue.destinationViewController as! HeroTableViewController
-            destination.heroType = heroType
-        }
     }
 }
