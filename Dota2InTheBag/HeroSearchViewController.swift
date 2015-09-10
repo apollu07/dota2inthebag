@@ -17,6 +17,17 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
     var searchActive : Bool = false
     var tap: UITapGestureRecognizer!
     
+    class Section {
+        var heroesInSection: [DotaHero]?
+        var sectionName: String?
+        
+        init (name: String, heroes: [DotaHero]) {
+            heroesInSection = heroes
+            sectionName = name
+        }
+    }
+    var sections = [Section]()
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -26,6 +37,11 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
         tableView.delegate = self
         searchBar.delegate = self
         tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        // Init sections.
+        sections.append(Section(name: "Strength", heroes: heroDatabase.strHeroes))
+        sections.append(Section(name: "Agility", heroes: heroDatabase.agiHeroes))
+        sections.append(Section(name: "Intelligence", heroes: heroDatabase.intHeroes))
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,16 +51,23 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
     
     // Table related functions.
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // Return the number of sections.
-        return 1
+        // Return the number of sections. Only show section view in search inactive mode.
+        if searchActive {
+            return 1
+        }
+        return sections.count
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        if searchActive == true {
+        if searchActive {
             return filteredHeroes.count
         }
-        return heroDatabase.database.count + 1
+        // Add a return cell in last table section.
+        if (section == sections.count - 1) {
+            return sections[section].heroesInSection!.count + 1
+        }
+        return sections[section].heroesInSection!.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -52,13 +75,14 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
         
         // Configure the cell...
         let row = indexPath.row
+        let section = indexPath.section
         var heroes: [DotaHero]!
         if searchActive == true {
             heroes = filteredHeroes
         } else {
-            heroes = heroDatabase.database
+            heroes = sections[section].heroesInSection
         }
-        if !searchActive && row == heroDatabase.database.count {
+        if !searchActive && section == sections.count - 1 && row == sections[section].heroesInSection!.count {
             // Return button
             cell.heroImage.image = UIImage(named: "back.png")
             cell.heroNameLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption2)
@@ -72,15 +96,24 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int)
+        -> String? {
+            if searchActive {
+                return ""
+            }
+            return sections[section].sectionName
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var heroes: [DotaHero]!
+        let section = indexPath.section
         if searchActive == true {
             heroes = filteredHeroes
         } else {
-            heroes = heroDatabase.database
+            heroes = sections[section].heroesInSection
         }
         let row = indexPath.row
-        if !searchActive && row == heroDatabase.database.count {
+        if !searchActive && section == sections.count - 1 && row == sections[section].heroesInSection!.count {
             self.performSegueWithIdentifier("returnedSegue", sender: self)
         } else {
             heroLineup.setHeroAt(position: touchedHeroButtonID!, to: heroes[indexPath.row])
@@ -89,7 +122,6 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
 
-    
     // Functions for search bar.
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         searchActive = true;
