@@ -27,6 +27,7 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     var sections = [Section]()
+    var sectionNames = [String]()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -42,6 +43,9 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
         sections.append(Section(name: "Strength", heroes: heroDatabase.strHeroes))
         sections.append(Section(name: "Agility", heroes: heroDatabase.agiHeroes))
         sections.append(Section(name: "Intelligence", heroes: heroDatabase.intHeroes))
+        for s in sections {
+            sectionNames.append(s.sectionName!)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -121,11 +125,24 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
             
         }
     }
+    
+    func sectionIndexTitlesForTableView(tableView: UITableView) -> [AnyObject]! {
+        if searchActive {
+            return [String]()
+        }
+        return sectionNames
+    }
+    
+    func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
+        var temp = sectionNames as NSArray
+        return temp.indexOfObject(title)
+    }
 
     // Functions for search bar.
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         searchActive = true;
         view.addGestureRecognizer(tap)
+        self.tableView.reloadData()
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
