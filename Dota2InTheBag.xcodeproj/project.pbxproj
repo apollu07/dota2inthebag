@@ -59,8 +59,9 @@
 		AFA9DA161B9D2D0900B1EEAF /* storm_spirit.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA9DA101B9D2D0900B1EEAF /* storm_spirit.png */; };
 		AFA9DA171B9D2D0900B1EEAF /* tiny.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA9DA111B9D2D0900B1EEAF /* tiny.png */; };
 		AFA9DA181B9D2D0900B1EEAF /* vengefulspirit.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA9DA121B9D2D0900B1EEAF /* vengefulspirit.png */; };
+		AFB0BF741BA4B1D6000DB144 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB0BF731BA4B1D6000DB144 /* background.png */; };
+		AFB0BF781BA4BB27000DB144 /* add_hero.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB0BF771BA4BB27000DB144 /* add_hero.png */; };
 		AFBBB00F1B9560C400524A11 /* DotaHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBBB00E1B9560C400524A11 /* DotaHero.swift */; };
-		AFBBB0111B95674E00524A11 /* add_hero.png in Resources */ = {isa = PBXBuildFile; fileRef = AFBBB0101B95674E00524A11 /* add_hero.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,8 +131,9 @@
 		AFA9DA101B9D2D0900B1EEAF /* storm_spirit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = storm_spirit.png; sourceTree = "<group>"; };
 		AFA9DA111B9D2D0900B1EEAF /* tiny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiny.png; sourceTree = "<group>"; };
 		AFA9DA121B9D2D0900B1EEAF /* vengefulspirit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vengefulspirit.png; sourceTree = "<group>"; };
+		AFB0BF731BA4B1D6000DB144 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		AFB0BF771BA4BB27000DB144 /* add_hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_hero.png; sourceTree = "<group>"; };
 		AFBBB00E1B9560C400524A11 /* DotaHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotaHero.swift; sourceTree = "<group>"; };
-		AFBBB0101B95674E00524A11 /* add_hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_hero.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,8 +199,10 @@
 				AF5E87E61B9E007F00849980 /* tidehunter.png */,
 				AF5E87E71B9E007F00849980 /* lion.png */,
 				AF5E87E81B9E007F00849980 /* shadow_shaman.png */,
+				AFB0BF771BA4BB27000DB144 /* add_hero.png */,
 				AF5E87E91B9E007F00849980 /* slardar.png */,
 				AF5E87EA1B9E007F00849980 /* witch_doctor.png */,
+				AFB0BF731BA4B1D6000DB144 /* background.png */,
 				AF5E87EB1B9E008000849980 /* lina.png */,
 				AF5E87EC1B9E008000849980 /* zuus.png */,
 				AF4299ED1B9E60B600458602 /* warlock.png */,
@@ -232,7 +236,6 @@
 				AFA9DA081B9D00B800B1EEAF /* nevermore.png */,
 				AF3EF6BD1B9CF73500E9A6A0 /* mirana.png */,
 				AF3EF6C11B9CF7AB00E9A6A0 /* morphling.png */,
-				AFBBB0101B95674E00524A11 /* add_hero.png */,
 				AF2799221B99053E00F9B346 /* unknown_hero.png */,
 				AFA3104A1B8C21AE001F136D /* Info.plist */,
 			);
@@ -343,7 +346,6 @@
 				AF4299FC1B9E60B600458602 /* venomancer.png in Resources */,
 				AF4299FD1B9E60B600458602 /* necrolyte.png in Resources */,
 				AF3EF6BA1B9CF55900E9A6A0 /* antimage.png in Resources */,
-				AFBBB0111B95674E00524A11 /* add_hero.png in Resources */,
 				AF3EF6BF1B9CF73500E9A6A0 /* earthshaker.png in Resources */,
 				AF2799251B993BA200F9B346 /* Main.storyboard in Resources */,
 				AF3EF6BE1B9CF73500E9A6A0 /* juggernaut.png in Resources */,
@@ -376,11 +378,13 @@
 				AFA310591B8C21AE001F136D /* LaunchScreen.xib in Resources */,
 				AFA9DA091B9D00B800B1EEAF /* puck.png in Resources */,
 				AFA9DA0B1B9D00B800B1EEAF /* phantom_lancer.png in Resources */,
+				AFB0BF781BA4BB27000DB144 /* add_hero.png in Resources */,
 				AF5E87F51B9E008000849980 /* zuus.png in Resources */,
 				AFA310561B8C21AE001F136D /* Images.xcassets in Resources */,
 				AF4299F71B9E60B600458602 /* warlock.png in Resources */,
 				AFA9DA171B9D2D0900B1EEAF /* tiny.png in Resources */,
 				AF5E87F41B9E008000849980 /* lina.png in Resources */,
+				AFB0BF741BA4B1D6000DB144 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
