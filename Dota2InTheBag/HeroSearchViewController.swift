@@ -89,12 +89,9 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
         if !searchActive && section == sections.count - 1 && row == sections[section].heroesInSection!.count {
             // Return button
             cell.heroImage.image = UIImage(named: "back.png")
-            cell.heroNameLabel.font = UIFont(name: "Copperplate", size: CGFloat(20))
-            cell.heroNameLabel.textColor = UIColor(red: 247, green: 231, blue: 206, alpha: 1)
             cell.heroNameLabel.text = "return to lineup"
         } else {
             cell.heroImage.image = UIImage(named: heroes[row].imageURL)
-            cell.heroNameLabel.font = UIFont(name: "Copperplate", size: CGFloat(20))
             cell.heroNameLabel.text = heroes[row].officialName
         }
         
