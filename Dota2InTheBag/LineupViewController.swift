@@ -42,7 +42,7 @@ class LineupViewController: UIViewController {
         renderSelectedHeroes()
         
         // Do any additional setup after loading the view.
-        println("Match level is: \(matchLevel!.rawValue)")
+        print("Match level is: \(matchLevel!.rawValue)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -119,16 +119,16 @@ class LineupViewController: UIViewController {
     
     // Return from hero search page.
     @IBAction func returned(segue: UIStoryboardSegue) {
-        println("returned from Hero search page.")
+        print("returned from Hero search page.")
     }
     // Add hero from hero search page.
     @IBAction func returnedWithNewHeroFromSearch(segue: UIStoryboardSegue) {
         renderSelectedHeroes()
-        println("returned from Hero search page after adding hero from search.")
+        print("returned from Hero search page after adding hero from search.")
     }
     // Return from pick result page.
     @IBAction func returnedFromPickResult(segue: UIStoryboardSegue) {
-        println("returned from pick result page.")
+        print("returned from pick result page.")
     }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

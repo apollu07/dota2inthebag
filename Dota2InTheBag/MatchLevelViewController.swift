@@ -50,7 +50,7 @@ class MatchLevelViewController: UIViewController {
     }
     
     @IBAction func returned(segue: UIStoryboardSegue) {
-        println("returned from Lineup page.")
+        print("returned from Lineup page.")
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

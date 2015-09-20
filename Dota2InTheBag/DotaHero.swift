@@ -24,8 +24,8 @@ class DotaHero {
     }
     
     func debugDisplay() {
-        println("ID: \(heroId), Name: \(officialName), Type: \(heroType), Image: \(imageURL)")
-        println("Nick names:")
+        print("ID: \(heroId), Name: \(officialName), Type: \(heroType), Image: \(imageURL)")
+        print("Nick names:")
         dump(allNames)
     }
 }
@@ -40,7 +40,7 @@ class SingletonDotaHeroDatabase {
     
     // Hard-coded init function to add all dota heros to the database.
     init() {
-        println("Initializing dota hero database.")
+        print("Initializing dota hero database.")
         database.append(DotaHero(id: 1, name: "Antimage", image: "antimage.png", type: "agi", names: ["antimage", "anti-mage", "anti mage", "am"]))
         database.append(DotaHero(id: 2, name: "Axe", image: "axe.png", type: "str", names: ["axe", "ax"]))
         database.append(DotaHero(id: 3, name: "Bane", image: "bane.png", type: "int", names: ["bane"]))
@@ -152,7 +152,7 @@ class SingletonHeroLineup {
     
     // Init function to set up 10 heros (nil)
     init() {
-        for i in 0...9 {
+        for _ in 0...9 {
             lineup.append(nil)
         }
     }

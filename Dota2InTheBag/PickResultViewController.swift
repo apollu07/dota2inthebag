@@ -15,7 +15,7 @@ class PickResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("match level is \(matchLevel?.rawValue)")
+        print("match level is \(matchLevel?.rawValue)")
 
         // Do any additional setup after loading the view.
     }

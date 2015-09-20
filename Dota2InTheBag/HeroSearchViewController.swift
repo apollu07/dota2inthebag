@@ -124,7 +124,7 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
-    func sectionIndexTitlesForTableView(tableView: UITableView) -> [AnyObject]! {
+    func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
         if searchActive {
             return [String]()
         }
@@ -132,7 +132,7 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
-        var temp = sectionNames as NSArray
+        let temp = sectionNames as NSArray
         return temp.indexOfObject(title)
     }
 
@@ -173,6 +173,6 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
     // MARK: - Navigation
     // Return from hero table view page.
     @IBAction func returnedFromHeroTableToHeroSearch(segue: UIStoryboardSegue) {
-        println("returned from Hero table view page.")
+        print("returned from Hero table view page.")
     }
 }
