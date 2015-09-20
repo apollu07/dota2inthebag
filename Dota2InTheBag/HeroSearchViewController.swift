@@ -118,9 +118,14 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
         if !searchActive && section == sections.count - 1 && row == sections[section].heroesInSection!.count {
             self.performSegueWithIdentifier("returnedSegue", sender: self)
         } else {
-            heroLineup.setHeroAt(position: touchedHeroButtonID!, to: heroes[indexPath.row])
-            self.performSegueWithIdentifier("returnedWithNewHeroFromSearchSegue", sender: self)
-            
+            if heroLineup.hasHero(heroes[indexPath.row]) {
+                let alert = UIAlertController(title: "Yo", message: "This hero has already been added to the lineup.", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            } else {
+                heroLineup.setHeroAt(position: touchedHeroButtonID!, to: heroes[indexPath.row])
+                self.performSegueWithIdentifier("returnedWithNewHeroFromSearchSegue", sender: self)
+            }
         }
     }
     
@@ -169,7 +174,7 @@ class HeroSearchViewController: UIViewController, UITableViewDataSource, UITable
             self.tableView.reloadData()
         }
     }
-    
+
     // MARK: - Navigation
     // Return from hero table view page.
     @IBAction func returnedFromHeroTableToHeroSearch(segue: UIStoryboardSegue) {

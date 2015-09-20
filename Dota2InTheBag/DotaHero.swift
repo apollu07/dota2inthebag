@@ -175,6 +175,15 @@ class SingletonHeroLineup {
         lineup[pos] = hero
     }
     
+    func hasHero(hero: DotaHero) -> Bool {
+        for i in 0...9 {
+            if lineup[i] != nil && lineup[i]!.heroId == hero.heroId {
+                return true
+            }
+        }
+        return false
+    }
+    
     func clear() {
         for i in 0...9 {
             lineup[i] = nil

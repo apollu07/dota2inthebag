@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF0097191B8ED4DD00B129A6 /* MatchLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */; };
+		AF2072F21BAE37440057729E /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2072F11BAE37440057729E /* back.png */; settings = {ASSET_TAGS = (); }; };
 		AF2799251B993BA200F9B346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2799241B993BA200F9B346 /* Main.storyboard */; };
 		AF3EF6AE1B9CDAD000E9A6A0 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3EF6AD1B9CDAD000E9A6A0 /* HeroTableViewCell.swift */; };
 		AF3EF6B51B9CF55900E9A6A0 /* bloodseeker.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3EF6AF1B9CF55900E9A6A0 /* bloodseeker.png */; };
@@ -71,7 +72,6 @@
 		AFB0BF781BA4BB27000DB144 /* add_hero.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB0BF771BA4BB27000DB144 /* add_hero.png */; };
 		AFBBB00F1B9560C400524A11 /* DotaHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBBB00E1B9560C400524A11 /* DotaHero.swift */; };
 		AFE02BD81BA529DB001F324F /* background_gold.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE02BD71BA529DB001F324F /* background_gold.png */; };
-		AFE02BDA1BA52E7E001F324F /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE02BD91BA52E7E001F324F /* back.png */; };
 		AFF3BFC81BAE33580013BCE2 /* dark_seer.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF3BFBE1BAE33580013BCE2 /* dark_seer.png */; settings = {ASSET_TAGS = (); }; };
 		AFF3BFC91BAE33580013BCE2 /* leshrac.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF3BFBF1BAE33580013BCE2 /* leshrac.png */; settings = {ASSET_TAGS = (); }; };
 		AFF3BFCA1BAE33580013BCE2 /* huskar.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF3BFC01BAE33580013BCE2 /* huskar.png */; settings = {ASSET_TAGS = (); }; };
@@ -96,6 +96,7 @@
 
 /* Begin PBXFileReference section */
 		AF0097181B8ED4DD00B129A6 /* MatchLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchLevelViewController.swift; sourceTree = "<group>"; };
+		AF2072F11BAE37440057729E /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		AF2799241B993BA200F9B346 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AF3EF6AD1B9CDAD000E9A6A0 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
 		AF3EF6AF1B9CF55900E9A6A0 /* bloodseeker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bloodseeker.png; sourceTree = "<group>"; };
@@ -163,7 +164,6 @@
 		AFB0BF771BA4BB27000DB144 /* add_hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_hero.png; sourceTree = "<group>"; };
 		AFBBB00E1B9560C400524A11 /* DotaHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotaHero.swift; sourceTree = "<group>"; };
 		AFE02BD71BA529DB001F324F /* background_gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_gold.png; sourceTree = "<group>"; };
-		AFE02BD91BA52E7E001F324F /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		AFF3BFBE1BAE33580013BCE2 /* dark_seer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark_seer.png; sourceTree = "<group>"; };
 		AFF3BFBF1BAE33580013BCE2 /* leshrac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leshrac.png; sourceTree = "<group>"; };
 		AFF3BFC01BAE33580013BCE2 /* huskar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huskar.png; sourceTree = "<group>"; };
@@ -280,9 +280,9 @@
 				AFA9DA0E1B9D2D0900B1EEAF /* sven.png */,
 				AFA9DA0F1B9D2D0900B1EEAF /* sand_king.png */,
 				AFA9DA101B9D2D0900B1EEAF /* storm_spirit.png */,
+				AF2072F11BAE37440057729E /* back.png */,
 				AFA9DA111B9D2D0900B1EEAF /* tiny.png */,
 				AFA9DA121B9D2D0900B1EEAF /* vengefulspirit.png */,
-				AFE02BD91BA52E7E001F324F /* back.png */,
 				AF3EF6AF1B9CF55900E9A6A0 /* bloodseeker.png */,
 				AF3EF6B01B9CF55900E9A6A0 /* bane.png */,
 				AF3EF6B11B9CF55900E9A6A0 /* crystal_maiden.png */,
@@ -424,7 +424,6 @@
 				AFA9DA131B9D2D0900B1EEAF /* razor.png in Resources */,
 				AFF3BFCC1BAE33580013BCE2 /* furion.png in Resources */,
 				AF6754361BA5368D0073C13E /* faceless_void.png in Resources */,
-				AFE02BDA1BA52E7E001F324F /* back.png in Resources */,
 				AF5E87F11B9E008000849980 /* shadow_shaman.png in Resources */,
 				AF3EF6C21B9CF7AB00E9A6A0 /* morphling.png in Resources */,
 				AF5E87F21B9E008000849980 /* slardar.png in Resources */,
@@ -464,6 +463,7 @@
 				AFA310561B8C21AE001F136D /* Images.xcassets in Resources */,
 				AF67542F1BA5368D0073C13E /* luna.png in Resources */,
 				AF4299F71B9E60B600458602 /* warlock.png in Resources */,
+				AF2072F21BAE37440057729E /* back.png in Resources */,
 				AFA9DA171B9D2D0900B1EEAF /* tiny.png in Resources */,
 				AF5E87F41B9E008000849980 /* lina.png in Resources */,
 				AFB0BF741BA4B1D6000DB144 /* background.png in Resources */,
