@@ -91,6 +91,16 @@ class SingletonDotaHeroDatabase {
         database.append(DotaHero(id: 48, name: "Luna", image: "luna.png", type: "agi", names: ["luna"]))
         database.append(DotaHero(id: 49, name: "Dragon Knight", image: "dragon_knight.png", type: "str", names: ["dragon knight", "dn"]))
         database.append(DotaHero(id: 50, name: "Dazzle", image: "dazzle.png", type: "int", names: ["dazzle"]))
+        database.append(DotaHero(id: 51, name: "Clockwerk", image: "rattletrap.png", type: "str", names: ["clockwerk"]))
+        database.append(DotaHero(id: 52, name: "Leshrac", image: "leshrac.png", type: "int", names: ["leshrac"]))
+        database.append(DotaHero(id: 53, name: "Nature's Prophet", image: "furion.png", type: "int", names: ["nature's prophet", "np", "furion"]))
+        database.append(DotaHero(id: 54, name: "Lifestealer", image: "life_stealer.png", type: "str", names: ["lifestealer", "naix"]))
+        database.append(DotaHero(id: 55, name: "Dark Seer", image: "dark_seer.png", type: "int", names: ["dark seer", "ds"]))
+        database.append(DotaHero(id: 56, name: "Clinkz", image: "clinkz.png", type: "agi", names: ["clinkz"]))
+        database.append(DotaHero(id: 57, name: "Omniknight", image: "omniknight.png", type: "str", names: ["omniknight"]))
+        database.append(DotaHero(id: 58, name: "Enchantress", image: "enchantress.png", type: "int", names: ["enchatress"]))
+        database.append(DotaHero(id: 59, name: "Huskar", image: "huskar.png", type: "str", names: ["huskar"]))
+        database.append(DotaHero(id: 60, name: "Night Stalker", image: "night_stalker.png", type: "str", names: ["night stalker"]))
         // Note: no 108
         
         // Init heroes of different types.

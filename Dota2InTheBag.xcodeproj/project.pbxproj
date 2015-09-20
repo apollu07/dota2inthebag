@@ -72,6 +72,16 @@
 		AFBBB00F1B9560C400524A11 /* DotaHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBBB00E1B9560C400524A11 /* DotaHero.swift */; };
 		AFE02BD81BA529DB001F324F /* background_gold.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE02BD71BA529DB001F324F /* background_gold.png */; };
 		AFE02BDA1BA52E7E001F324F /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE02BD91BA52E7E001F324F /* back.png */; };
+		AFF3BFC81BAE33580013BCE2 /* dark_seer.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF3BFBE1BAE33580013BCE2 /* dark_seer.png */; settings = {ASSET_TAGS = (); }; };
+		AFF3BFC91BAE33580013BCE2 /* leshrac.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF3BFBF1BAE33580013BCE2 /* leshrac.png */; settings = {ASSET_TAGS = (); }; };
+		AFF3BFCA1BAE33580013BCE2 /* huskar.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF3BFC01BAE33580013BCE2 /* huskar.png */; settings = {ASSET_TAGS = (); }; };
+		AFF3BFCB1BAE33580013BCE2 /* enchantress.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF3BFC11BAE33580013BCE2 /* enchantress.png */; settings = {ASSET_TAGS = (); }; };
+		AFF3BFCC1BAE33580013BCE2 /* furion.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF3BFC21BAE33580013BCE2 /* furion.png */; settings = {ASSET_TAGS = (); }; };
+		AFF3BFCD1BAE33580013BCE2 /* omniknight.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF3BFC31BAE33580013BCE2 /* omniknight.png */; settings = {ASSET_TAGS = (); }; };
+		AFF3BFCE1BAE33580013BCE2 /* life_stealer.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF3BFC41BAE33580013BCE2 /* life_stealer.png */; settings = {ASSET_TAGS = (); }; };
+		AFF3BFCF1BAE33580013BCE2 /* rattletrap.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF3BFC51BAE33580013BCE2 /* rattletrap.png */; settings = {ASSET_TAGS = (); }; };
+		AFF3BFD01BAE33580013BCE2 /* night_stalker.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF3BFC61BAE33580013BCE2 /* night_stalker.png */; settings = {ASSET_TAGS = (); }; };
+		AFF3BFD11BAE33580013BCE2 /* clinkz.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF3BFC71BAE33580013BCE2 /* clinkz.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +164,16 @@
 		AFBBB00E1B9560C400524A11 /* DotaHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotaHero.swift; sourceTree = "<group>"; };
 		AFE02BD71BA529DB001F324F /* background_gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_gold.png; sourceTree = "<group>"; };
 		AFE02BD91BA52E7E001F324F /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		AFF3BFBE1BAE33580013BCE2 /* dark_seer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark_seer.png; sourceTree = "<group>"; };
+		AFF3BFBF1BAE33580013BCE2 /* leshrac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leshrac.png; sourceTree = "<group>"; };
+		AFF3BFC01BAE33580013BCE2 /* huskar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huskar.png; sourceTree = "<group>"; };
+		AFF3BFC11BAE33580013BCE2 /* enchantress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enchantress.png; sourceTree = "<group>"; };
+		AFF3BFC21BAE33580013BCE2 /* furion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = furion.png; sourceTree = "<group>"; };
+		AFF3BFC31BAE33580013BCE2 /* omniknight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = omniknight.png; sourceTree = "<group>"; };
+		AFF3BFC41BAE33580013BCE2 /* life_stealer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = life_stealer.png; sourceTree = "<group>"; };
+		AFF3BFC51BAE33580013BCE2 /* rattletrap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rattletrap.png; sourceTree = "<group>"; };
+		AFF3BFC61BAE33580013BCE2 /* night_stalker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = night_stalker.png; sourceTree = "<group>"; };
+		AFF3BFC71BAE33580013BCE2 /* clinkz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clinkz.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +240,16 @@
 				AF5E87E71B9E007F00849980 /* lion.png */,
 				AFE02BD71BA529DB001F324F /* background_gold.png */,
 				AF5E87E81B9E007F00849980 /* shadow_shaman.png */,
+				AFF3BFBE1BAE33580013BCE2 /* dark_seer.png */,
+				AFF3BFBF1BAE33580013BCE2 /* leshrac.png */,
+				AFF3BFC01BAE33580013BCE2 /* huskar.png */,
+				AFF3BFC11BAE33580013BCE2 /* enchantress.png */,
+				AFF3BFC21BAE33580013BCE2 /* furion.png */,
+				AFF3BFC31BAE33580013BCE2 /* omniknight.png */,
+				AFF3BFC41BAE33580013BCE2 /* life_stealer.png */,
+				AFF3BFC51BAE33580013BCE2 /* rattletrap.png */,
+				AFF3BFC61BAE33580013BCE2 /* night_stalker.png */,
+				AFF3BFC71BAE33580013BCE2 /* clinkz.png */,
 				AFB0BF771BA4BB27000DB144 /* add_hero.png */,
 				AF5E87E91B9E007F00849980 /* slardar.png */,
 				AF5E87EA1B9E007F00849980 /* witch_doctor.png */,
@@ -375,11 +405,13 @@
 				AF5E87F01B9E008000849980 /* lion.png in Resources */,
 				AFA9DA141B9D2D0900B1EEAF /* sven.png in Resources */,
 				AF4299FC1B9E60B600458602 /* venomancer.png in Resources */,
+				AFF3BFCF1BAE33580013BCE2 /* rattletrap.png in Resources */,
 				AF4299FD1B9E60B600458602 /* necrolyte.png in Resources */,
 				AF3EF6BA1B9CF55900E9A6A0 /* antimage.png in Resources */,
 				AF6754311BA5368D0073C13E /* templar_assassin.png in Resources */,
 				AF3EF6BF1B9CF73500E9A6A0 /* earthshaker.png in Resources */,
 				AF2799251B993BA200F9B346 /* Main.storyboard in Resources */,
+				AFF3BFCD1BAE33580013BCE2 /* omniknight.png in Resources */,
 				AF67542D1BA5368D0073C13E /* dazzle.png in Resources */,
 				AF3EF6BE1B9CF73500E9A6A0 /* juggernaut.png in Resources */,
 				AF6754331BA5368D0073C13E /* phantom_assassin.png in Resources */,
@@ -390,6 +422,7 @@
 				AF3EF6B51B9CF55900E9A6A0 /* bloodseeker.png in Resources */,
 				AF4299F81B9E60B600458602 /* enigma.png in Resources */,
 				AFA9DA131B9D2D0900B1EEAF /* razor.png in Resources */,
+				AFF3BFCC1BAE33580013BCE2 /* furion.png in Resources */,
 				AF6754361BA5368D0073C13E /* faceless_void.png in Resources */,
 				AFE02BDA1BA52E7E001F324F /* back.png in Resources */,
 				AF5E87F11B9E008000849980 /* shadow_shaman.png in Resources */,
@@ -400,24 +433,31 @@
 				AF4299FA1B9E60B600458602 /* queenofpain.png in Resources */,
 				AFA9DA181B9D2D0900B1EEAF /* vengefulspirit.png in Resources */,
 				AF5E87EF1B9E008000849980 /* tidehunter.png in Resources */,
+				AFF3BFD11BAE33580013BCE2 /* clinkz.png in Resources */,
 				AF6754321BA5368D0073C13E /* pugna.png in Resources */,
 				AF4299FF1B9E60B600458602 /* tinker.png in Resources */,
 				AF3EF6B61B9CF55900E9A6A0 /* bane.png in Resources */,
 				AF3EF6B81B9CF55900E9A6A0 /* axe.png in Resources */,
 				AF6754351BA5368D0073C13E /* skeleton_king.png in Resources */,
+				AFF3BFC81BAE33580013BCE2 /* dark_seer.png in Resources */,
 				AFA9DA151B9D2D0900B1EEAF /* sand_king.png in Resources */,
 				AF4299FB1B9E60B600458602 /* riki.png in Resources */,
+				AFF3BFD01BAE33580013BCE2 /* night_stalker.png in Resources */,
 				AF5E87EE1B9E008000849980 /* kunkka.png in Resources */,
+				AFF3BFCA1BAE33580013BCE2 /* huskar.png in Resources */,
+				AFF3BFCE1BAE33580013BCE2 /* life_stealer.png in Resources */,
 				AFA9DA161B9D2D0900B1EEAF /* storm_spirit.png in Resources */,
 				AF5E87F61B9E008000849980 /* windrunner.png in Resources */,
 				AF4299F91B9E60B600458602 /* sniper.png in Resources */,
 				AF67542E1BA5368D0073C13E /* dragon_knight.png in Resources */,
 				AF6754341BA5368D0073C13E /* death_prophet.png in Resources */,
+				AFF3BFCB1BAE33580013BCE2 /* enchantress.png in Resources */,
 				AFE02BD81BA529DB001F324F /* background_gold.png in Resources */,
 				AFA9DA0A1B9D00B800B1EEAF /* pudge.png in Resources */,
 				AFA310591B8C21AE001F136D /* LaunchScreen.xib in Resources */,
 				AFA9DA091B9D00B800B1EEAF /* puck.png in Resources */,
 				AFA9DA0B1B9D00B800B1EEAF /* phantom_lancer.png in Resources */,
+				AFF3BFC91BAE33580013BCE2 /* leshrac.png in Resources */,
 				AFB0BF781BA4BB27000DB144 /* add_hero.png in Resources */,
 				AF6754301BA5368D0073C13E /* viper.png in Resources */,
 				AF5E87F51B9E008000849980 /* zuus.png in Resources */,
