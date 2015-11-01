@@ -121,6 +121,16 @@ class SingletonDotaHeroDatabase {
         database.append(DotaHero(id: 78, name: "Brewmaster", image: "brewmaster.png", type: "str", names: ["brewmaster", "bm"]))
         database.append(DotaHero(id: 79, name: "Shadow Demon", image: "shadow_demon.png", type: "int", names: ["shadow demon", "sd"]))
         database.append(DotaHero(id: 80, name: "Lone Druid", image: "lone_druid.png", type: "agi", names: ["lone druid", "bear"]))
+        database.append(DotaHero(id: 81, name: "Chaos Knight", image: "chaos_knight.png", type: "str", names: ["chaos knight", "ck"]))
+        database.append(DotaHero(id: 82, name: "Meepo", image: "meepo.png", type: "agi", names: ["meepo"]))
+        database.append(DotaHero(id: 83, name: "Treant Protector", image: "treant.png", type: "str", names: ["treant protector"]))
+        database.append(DotaHero(id: 84, name: "Orge Magi", image: "ogre_magi.png", type: "int", names: ["orge magi"]))
+        database.append(DotaHero(id: 85, name: "Undying", image: "undying.png", type: "str", names: ["undying"]))
+        database.append(DotaHero(id: 86, name: "Rubick", image: "rubick.png", type: "int", names: ["rubick"]))
+        database.append(DotaHero(id: 87, name: "Disruptor", image: "disruptor.png", type: "int", names: ["disruptor"]))
+        database.append(DotaHero(id: 88, name: "Nyx Assassin", image: "nyx_assassin.png", type: "agi", names: ["nyx assassin", "na"]))
+        database.append(DotaHero(id: 89, name: "Naga Siren", image: "naga_siren.png", type: "agi", names: ["naga siren"]))
+        database.append(DotaHero(id: 90, name: "Keeper of the Light", image: "keeper_of_the_light.png", type: "int", names: ["keeper of the light", "kotl"]))
         // Note: no 108
         
         // Init heroes of different types.
