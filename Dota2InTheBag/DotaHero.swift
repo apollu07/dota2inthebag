@@ -141,6 +141,19 @@ class SingletonDotaHeroDatabase {
         database.append(DotaHero(id: 98, name: "Timbersaw", image: "shredder.png", type: "str", names: ["timbersaw", "shredder"]))
         database.append(DotaHero(id: 99, name: "Bristleback", image: "bristleback.png", type: "str", names: ["bristleback", "bb"]))
         database.append(DotaHero(id: 100, name: "Tusk", image: "tusk.png", type: "str", names: ["tusk"]))
+        database.append(DotaHero(id: 101, name: "Skywrath Mage", image: "skywrath_mage.png", type: "int", names: ["skywrath mage"]))
+        database.append(DotaHero(id: 102, name: "Abaddon", image: "abaddon.png", type: "str", names: ["abaddon"]))
+        database.append(DotaHero(id: 103, name: "Elder Titan", image: "elder_titan.png", type: "str", names: ["elder titan"]))
+        database.append(DotaHero(id: 104, name: "Legion Commander", image: "legion_commander.png", type: "str", names: ["legion commander", "lc"]))
+        database.append(DotaHero(id: 105, name: "Techies", image: "techies.png", type: "int", names: ["techies"]))
+        database.append(DotaHero(id: 106, name: "Ember Spirit", image: "ember_spirit.png", type: "agi", names: ["ember spirit"]))
+        database.append(DotaHero(id: 107, name: "Earth Spirit", image: "earth_spirit.png", type: "str", names: ["earth spirit", "es"]))
+        database.append(DotaHero(id: 108, name: "unknown", image: "", type: "", names: ["unknown"]))
+        database.append(DotaHero(id: 109, name: "Terrorblade", image: "terrorblade.png", type: "agi", names: ["terrorblade", "tb"]))
+        database.append(DotaHero(id: 110, name: "Phoenix", image: "phoenix.png", type: "str", names: ["phoenix"]))
+        database.append(DotaHero(id: 111, name: "Oracle", image: "oracle.png", type: "int", names: ["oracle"]))
+        database.append(DotaHero(id: 112, name: "Winter Wyvern", image: "winter_wyvern.png", type: "int", names: ["winter wyvern", "ww"]))
+
         // Note: no 108
         
         // Init heroes of different types.
