@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LineupViewController: UIViewController {
     
@@ -43,6 +44,24 @@ class LineupViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         print("Match level is: \(matchLevel!.rawValue)")
+        
+        let query = PFQuery(className:"WinRates")
+        query.whereKey("hero_id", equalTo: 1)
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                // The find succeeded.
+                print("Successfully retrieved \(objects!.count) scores.")
+                // Do something with the found objects
+                for object in objects! {
+                    print(object["enemy_win_rates"])
+                }
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
