@@ -14,6 +14,7 @@ class LineupViewController: UIViewController {
     var matchLevel: MatchLevelViewController.MatchLevel?
     var heroDatabase = SingletonDotaHeroDatabase.sharedInstance
     var heroLineup = SingletonHeroLineup.sharedInstance
+    var heroWinRates = SingletonHeroWinRates.sharedInstance
         
     @IBOutlet weak var heroButton0: UIButton!
     @IBOutlet weak var heroButton1: UIButton!
@@ -45,21 +46,22 @@ class LineupViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("Match level is: \(matchLevel!.rawValue)")
         
-        let query = PFQuery(className:"WinRates")
-        query.whereKey("hero_id", equalTo: 1)
-        query.findObjectsInBackgroundWithBlock {
-            (objects: [PFObject]?, error: NSError?) -> Void in
+        // Load and parse hero win rates if it's not yet loaded.
+        if heroWinRates.enemyWinRates[0]!.count != 113 {
+            let query = PFQuery(className:"WinRates")
+            query.limit = 150
+            query.whereKey("key", equalTo: 1)
+            query.findObjectsInBackgroundWithBlock {
+                (objects: [PFObject]?, error: NSError?) -> Void in
             
-            if error == nil {
-                // The find succeeded.
-                print("Successfully retrieved \(objects!.count) scores.")
-                // Do something with the found objects
-                for object in objects! {
-                    print(object["enemy_win_rates"])
+                if error == nil {
+                    // The find succeeded.
+                    print("Successfully retrieved \(objects!.count) scores.")
+                    self.heroWinRates.loadHeroWinRates(objects: objects!)
+                } else {
+                    // Log details of the failure
+                    print("Error: \(error!) \(error!.userInfo)")
                 }
-            } else {
-                // Log details of the failure
-                print("Error: \(error!) \(error!.userInfo)")
             }
         }
     }

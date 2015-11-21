@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Parse
 
 class DotaHero {
     var heroId: Int = -1
@@ -240,6 +241,49 @@ class SingletonHeroLineup {
     func clear() {
         for i in 0...9 {
             lineup[i] = nil
+        }
+    }
+}
+
+class SingletonHeroWinRates {
+    static let sharedInstance = SingletonHeroWinRates()
+    
+    // Dictionaries with hero id as the key, an array of win rates as the value.
+    // array[i] represents the win rate when ith hero is the ally/enemy of current hero.
+    var allyWinRates = [Int: [Float]]()
+    var enemyWinRates = [Int: [Float]]()
+    
+    init () {
+        for i in 0...112 {
+            allyWinRates[i] = [Float]()
+            enemyWinRates[i] = [Float]()
+        }
+    }
+    
+    // Load and parse the win rate objects and store win rates information in the dictionaries.
+    func loadHeroWinRates(objects winRateObjects: [PFObject]) {
+        for obj in winRateObjects {
+            let heroId = obj["hero_id"] as! Int
+            let enemyString = obj["enemy_win_rates"]
+            let allyString = obj["ally_win_rates"]
+            let enemyArray = enemyString.componentsSeparatedByString(",")
+            let allyArray = allyString.componentsSeparatedByString(",")
+            for enemy in enemyArray {
+                let enemyWinRate = Float(enemy.componentsSeparatedByString(":")[1])
+                if enemyWinRates[heroId] != nil {
+                    enemyWinRates[heroId]!.append(enemyWinRate!)
+                } else {
+                    print("Something is wrong parsing hero win rate!")
+                }
+            }
+            for ally in allyArray {
+                let allyWinRate = Float(ally.componentsSeparatedByString(":")[1])
+                if allyWinRates[heroId] != nil {
+                    allyWinRates[heroId]!.append(allyWinRate!)
+                } else {
+                    print("Something is wrong parsing hero win rate!")
+                }
+            }
         }
     }
 }

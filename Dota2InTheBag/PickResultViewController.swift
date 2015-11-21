@@ -12,6 +12,7 @@ class PickResultViewController: UIViewController {
     var matchLevel: MatchLevelViewController.MatchLevel?
     var heroDatabase = SingletonDotaHeroDatabase.sharedInstance
     var heroLineup = SingletonHeroLineup.sharedInstance
+    var heroWinRates = SingletonHeroWinRates.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
