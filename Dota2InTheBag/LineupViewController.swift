@@ -10,12 +10,15 @@ import UIKit
 import Parse
 
 class LineupViewController: UIViewController {
-    
+    struct HeroWinRate {
+        var heroId: Int
+        var winRate: Float
+    }
     var matchLevel: MatchLevelViewController.MatchLevel?
     var heroDatabase = SingletonDotaHeroDatabase.sharedInstance
     var heroLineup = SingletonHeroLineup.sharedInstance
     var heroWinRates = SingletonHeroWinRates.sharedInstance
-        
+    
     @IBOutlet weak var heroButton0: UIButton!
     @IBOutlet weak var heroButton1: UIButton!
     @IBOutlet weak var heroButton2: UIButton!
@@ -121,6 +124,7 @@ class LineupViewController: UIViewController {
     
     // Pick hero based on current lineup
     @IBAction func pickButtonTouched(sender: AnyObject) {
+        computeHeroPickSuggestions()
         performSegueWithIdentifier("lineupToPickResultSegue", sender: nil)
     }
     
@@ -133,6 +137,47 @@ class LineupViewController: UIViewController {
             } else {
                 heroButtonArray[i].setBackgroundImage(UIImage(named: "add_hero.png"), forState: .Normal)
             }
+        }
+    }
+    
+    // Compute hero pick suggestions based on current lineup and hero win rates.
+    func computeHeroPickSuggestions() {
+        var combinedWinRates: [HeroWinRate] = []
+        // First set initial win rate of each hero to the win rate of itself if the
+        // current lineup is empty.
+        for i in 0...112 {
+            if heroLineup.isEmpty() {
+                let hwr = HeroWinRate(heroId: i, winRate: heroWinRates.allyWinRates[i]![i])
+                combinedWinRates.append(hwr)
+            } else {
+                let hwr = HeroWinRate(heroId: i, winRate: 1.0)
+                combinedWinRates.append(hwr)
+            }
+        }
+        // Ally heroes.
+        for i in 0...4 {
+            let hero = heroLineup.lineup[i]
+            if hero == nil {
+                continue
+            }
+            for hero_id in 0...112 {
+                combinedWinRates[hero_id].winRate *= heroWinRates.allyWinRates[i]![hero_id]
+            }
+        }
+        // Enemy heroes.
+        for i in 5...9 {
+            let hero = heroLineup.lineup[i]
+            if hero == nil {
+                continue
+            }
+            for hero_id in 0...112 {
+                combinedWinRates[hero_id].winRate *= heroWinRates.enemyWinRates[i]![hero_id]
+            }
+        }
+        // Sort.
+        let rankedWinRates = combinedWinRates.sort { $0.winRate > $1.winRate }
+        for i in 0...10 {
+            print("Hero: \(heroDatabase.database[rankedWinRates[i].heroId].officialName), ID: \(rankedWinRates[i].heroId) , Win Rate: \(rankedWinRates[i].winRate)")
         }
     }
     

@@ -42,6 +42,7 @@ class SingletonDotaHeroDatabase {
     // Hard-coded init function to add all dota heros to the database.
     init() {
         print("Initializing dota hero database.")
+        database.append(DotaHero(id: 0, name: "unknown", image: "", type: "", names: []))
         database.append(DotaHero(id: 1, name: "Antimage", image: "antimage.png", type: "agi", names: ["antimage", "anti-mage", "anti mage", "am"]))
         database.append(DotaHero(id: 2, name: "Axe", image: "axe.png", type: "str", names: ["axe", "ax"]))
         database.append(DotaHero(id: 3, name: "Bane", image: "bane.png", type: "int", names: ["bane"]))
@@ -242,6 +243,15 @@ class SingletonHeroLineup {
         for i in 0...9 {
             lineup[i] = nil
         }
+    }
+    
+    func isEmpty() -> Bool {
+        for i in 0...9 {
+            if lineup[i] != nil {
+                return false
+            }
+        }
+        return true
     }
 }
 
