@@ -208,6 +208,20 @@ class SingletonDotaHeroDatabase {
         let name2_ls = name2_l.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         return name1_ls == name2_ls
     }
+    
+    func getHeroNameByID(heroId id: Int) -> String {
+        if id >= 0 && id <= 112 {
+            return database[id].officialName
+        }
+        return "Invalid hero id"
+    }
+    
+    func getHeroImageByID(heroId id: Int) -> String {
+        if id >= 0 && id <= 112 {
+            return database[id].imageURL
+        }
+        return ""
+    }
 }
 
 class SingletonHeroLineup {

@@ -878,13 +878,18 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="firstChoiceImage" destination="cJh-so-2EL" id="5rA-Eh-3oc"/>
+                        <outlet property="firstChoiceLabel" destination="ubA-gr-zxn" id="5fy-89-ko1"/>
+                        <outlet property="otherOptionsLabel" destination="jQK-ZR-kpo" id="SGA-n0-Ec8"/>
+                        <outlet property="secondChoiceImage" destination="b15-je-2wE" id="3sW-x0-cX3"/>
+                        <outlet property="secondChoiceLabel" destination="Lob-or-r0t" id="6bN-3V-63E"/>
                         <segue destination="1un-xU-VQI" kind="unwind" identifier="returnedFromPickResultSegue" unwindAction="returnedFromPickResult:" id="Ysq-Op-26t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SsZ-dY-zch" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="1un-xU-VQI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="787" y="-581"/>
+            <point key="canvasLocation" x="786" y="-581.25"/>
         </scene>
         <!--Hero Search View Controller-->
         <scene sceneID="th4-Pa-iH4">
