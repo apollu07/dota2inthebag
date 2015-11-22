@@ -18,6 +18,7 @@ class LineupViewController: UIViewController {
     var heroDatabase = SingletonDotaHeroDatabase.sharedInstance
     var heroLineup = SingletonHeroLineup.sharedInstance
     var heroWinRates = SingletonHeroWinRates.sharedInstance
+    var suggestedHeroes = [Int]()
     
     @IBOutlet weak var heroButton0: UIButton!
     @IBOutlet weak var heroButton1: UIButton!
@@ -161,7 +162,7 @@ class LineupViewController: UIViewController {
                 continue
             }
             for hero_id in 0...112 {
-                combinedWinRates[hero_id].winRate *= heroWinRates.allyWinRates[i]![hero_id]
+                combinedWinRates[hero_id].winRate *= heroWinRates.allyWinRates[hero_id]![hero!.heroId]
             }
         }
         // Enemy heroes.
@@ -171,13 +172,18 @@ class LineupViewController: UIViewController {
                 continue
             }
             for hero_id in 0...112 {
-                combinedWinRates[hero_id].winRate *= heroWinRates.enemyWinRates[i]![hero_id]
+                combinedWinRates[hero_id].winRate *= heroWinRates.enemyWinRates[hero_id]![hero!.heroId]
             }
         }
         // Sort.
         let rankedWinRates = combinedWinRates.sort { $0.winRate > $1.winRate }
         for i in 0...10 {
             print("Hero: \(heroDatabase.database[rankedWinRates[i].heroId].officialName), ID: \(rankedWinRates[i].heroId) , Win Rate: \(rankedWinRates[i].winRate)")
+        }
+        // Save top 10 suggested heroes.
+        suggestedHeroes.removeAll()
+        for i in 0...9 {
+            suggestedHeroes.append(rankedWinRates[i].heroId)
         }
     }
     
@@ -205,6 +211,7 @@ class LineupViewController: UIViewController {
         } else if segue.identifier == "lineupToPickResultSegue" {
             let destination = segue.destinationViewController as! PickResultViewController
             destination.matchLevel = matchLevel
+            destination.suggestedHeroes = suggestedHeroes
         }
     }
 

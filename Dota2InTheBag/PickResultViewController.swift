@@ -12,12 +12,11 @@ class PickResultViewController: UIViewController {
     var matchLevel: MatchLevelViewController.MatchLevel?
     var heroDatabase = SingletonDotaHeroDatabase.sharedInstance
     var heroLineup = SingletonHeroLineup.sharedInstance
-    var heroWinRates = SingletonHeroWinRates.sharedInstance
+    var suggestedHeroes = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("match level is \(matchLevel?.rawValue)")
-
         // Do any additional setup after loading the view.
     }
 
