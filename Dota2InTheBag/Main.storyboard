@@ -10,7 +10,7 @@
         <!--Match Level View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="MatchLevelViewController" customModule="Dota2InTheBag" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MatchLevelViewController" customModule="Dota2CounterPicks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -162,7 +162,7 @@
         <!--Lineup View Controller-->
         <scene sceneID="95f-IA-amS">
             <objects>
-                <viewController id="ef6-Oo-i4v" customClass="LineupViewController" customModule="Dota2InTheBag" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ef6-Oo-i4v" customClass="LineupViewController" customModule="Dota2CounterPicks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S7v-qT-4q4"/>
                         <viewControllerLayoutGuide type="bottom" id="rOy-cg-7eI"/>
@@ -699,7 +699,7 @@
         <!--Pick Result View Controller-->
         <scene sceneID="3I8-S2-eWi">
             <objects>
-                <viewController id="kMb-Hx-5Cc" customClass="PickResultViewController" customModule="Dota2InTheBag" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kMb-Hx-5Cc" customClass="PickResultViewController" customModule="Dota2CounterPicks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JlG-CP-5Hb"/>
                         <viewControllerLayoutGuide type="bottom" id="98C-3r-Znd"/>
@@ -720,12 +720,15 @@
                                     <action selector="backButtonTouched:" destination="kMb-Hx-5Cc" eventType="touchUpInside" id="Beg-Nn-aio"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggested Counter Pick" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t95-Lw-6Gk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggested Counter Picks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t95-Lw-6Gk">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
                                 <color key="textColor" red="0.81568627449999997" green="0.70196078429999997" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="45" y="28" width="324" height="26"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phantom Lancer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubA-gr-zxn">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -768,7 +771,7 @@
                                 <color key="textColor" red="0.81568627449999997" green="0.70196078429999997" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiny, Vengeful Spirit, Antimage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQK-ZR-kpo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiny" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQK-ZR-kpo">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
@@ -795,6 +798,20 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sniper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5e-Jq-Ss6">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" red="0.81568627449999997" green="0.70196078429999997" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medusa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3G-vx-EGO">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" red="0.81568627449999997" green="0.70196078429999997" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -804,11 +821,18 @@
                             <constraint firstItem="ubA-gr-zxn" firstAttribute="top" secondItem="t95-Lw-6Gk" secondAttribute="bottom" constant="16" id="7Rs-rI-cWm"/>
                             <constraint firstItem="t95-Lw-6Gk" firstAttribute="top" secondItem="JlG-CP-5Hb" secondAttribute="bottom" constant="8" id="C6u-PY-WTH"/>
                             <constraint firstItem="Lob-or-r0t" firstAttribute="top" secondItem="cJh-so-2EL" secondAttribute="bottom" constant="16" id="EX1-uh-3gy"/>
+                            <constraint firstItem="Y3G-vx-EGO" firstAttribute="centerX" secondItem="hzm-aL-D8z" secondAttribute="centerX" id="Gnc-Nk-oyD"/>
                             <constraint firstItem="jQK-ZR-kpo" firstAttribute="top" secondItem="mKC-Yb-YsB" secondAttribute="bottom" constant="16" id="L6w-8d-fJq"/>
+                            <constraint firstItem="Y3G-vx-EGO" firstAttribute="top" secondItem="H5e-Jq-Ss6" secondAttribute="bottom" constant="16" id="QRv-JU-gzn">
+                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="ubA-gr-zxn" secondAttribute="centerX" id="T0f-4Y-e9X"/>
+                            <constraint firstItem="jQK-ZR-kpo" firstAttribute="centerX" secondItem="hzm-aL-D8z" secondAttribute="centerX" id="VLA-yD-Jah"/>
                             <constraint firstAttribute="centerX" secondItem="jQK-ZR-kpo" secondAttribute="centerX" id="WHW-Xe-erR"/>
+                            <constraint firstItem="H5e-Jq-Ss6" firstAttribute="centerX" secondItem="hzm-aL-D8z" secondAttribute="centerX" id="WMy-JP-7s8"/>
                             <constraint firstAttribute="centerX" secondItem="mKC-Yb-YsB" secondAttribute="centerX" id="bsa-lQ-xjj"/>
                             <constraint firstItem="b15-je-2wE" firstAttribute="top" secondItem="Lob-or-r0t" secondAttribute="bottom" constant="8" id="dCQ-H8-wrk"/>
+                            <constraint firstItem="H5e-Jq-Ss6" firstAttribute="top" secondItem="jQK-ZR-kpo" secondAttribute="bottom" constant="16" id="eEj-Yi-VjO"/>
                             <constraint firstAttribute="centerX" secondItem="Lob-or-r0t" secondAttribute="centerX" id="etS-VI-ZWk"/>
                             <constraint firstAttribute="centerX" secondItem="b15-je-2wE" secondAttribute="centerX" id="hrj-TV-WGp"/>
                             <constraint firstItem="cJh-so-2EL" firstAttribute="top" secondItem="ubA-gr-zxn" secondAttribute="bottom" constant="8" id="lC7-cE-xsl"/>
@@ -826,24 +850,31 @@
                                 <exclude reference="mKC-Yb-YsB"/>
                                 <exclude reference="jQK-ZR-kpo"/>
                                 <exclude reference="b15-je-2wE"/>
+                                <exclude reference="H5e-Jq-Ss6"/>
+                                <exclude reference="Y3G-vx-EGO"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="7Jf-CM-NiJ"/>
-                                <exclude reference="EX1-uh-3gy"/>
-                                <exclude reference="etS-VI-ZWk"/>
-                                <exclude reference="L6w-8d-fJq"/>
-                                <exclude reference="WHW-Xe-erR"/>
-                                <exclude reference="bsa-lQ-xjj"/>
-                                <exclude reference="whT-1M-VSC"/>
                                 <exclude reference="C6u-PY-WTH"/>
                                 <exclude reference="qWW-2W-O3V"/>
-                                <exclude reference="7Rs-rI-cWm"/>
-                                <exclude reference="T0f-4Y-e9X"/>
-                                <exclude reference="6Ey-JN-T0N"/>
-                                <exclude reference="dCQ-H8-wrk"/>
-                                <exclude reference="hrj-TV-WGp"/>
                                 <exclude reference="lC7-cE-xsl"/>
                                 <exclude reference="qMx-z7-HTf"/>
+                                <exclude reference="7Rs-rI-cWm"/>
+                                <exclude reference="T0f-4Y-e9X"/>
+                                <exclude reference="dCQ-H8-wrk"/>
+                                <exclude reference="hrj-TV-WGp"/>
+                                <exclude reference="EX1-uh-3gy"/>
+                                <exclude reference="etS-VI-ZWk"/>
+                                <exclude reference="bsa-lQ-xjj"/>
+                                <exclude reference="whT-1M-VSC"/>
+                                <exclude reference="L6w-8d-fJq"/>
+                                <exclude reference="VLA-yD-Jah"/>
+                                <exclude reference="WHW-Xe-erR"/>
+                                <exclude reference="WMy-JP-7s8"/>
+                                <exclude reference="eEj-Yi-VjO"/>
+                                <exclude reference="Gnc-Nk-oyD"/>
+                                <exclude reference="QRv-JU-gzn"/>
+                                <exclude reference="6Ey-JN-T0N"/>
+                                <exclude reference="7Jf-CM-NiJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -856,33 +887,42 @@
                                 <include reference="mKC-Yb-YsB"/>
                                 <include reference="jQK-ZR-kpo"/>
                                 <include reference="b15-je-2wE"/>
+                                <include reference="H5e-Jq-Ss6"/>
+                                <include reference="Y3G-vx-EGO"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="7Jf-CM-NiJ"/>
-                                <include reference="EX1-uh-3gy"/>
-                                <include reference="etS-VI-ZWk"/>
-                                <include reference="L6w-8d-fJq"/>
-                                <include reference="WHW-Xe-erR"/>
-                                <include reference="bsa-lQ-xjj"/>
-                                <include reference="whT-1M-VSC"/>
                                 <include reference="C6u-PY-WTH"/>
                                 <include reference="qWW-2W-O3V"/>
-                                <include reference="7Rs-rI-cWm"/>
-                                <include reference="T0f-4Y-e9X"/>
-                                <include reference="6Ey-JN-T0N"/>
-                                <include reference="dCQ-H8-wrk"/>
-                                <include reference="hrj-TV-WGp"/>
                                 <include reference="lC7-cE-xsl"/>
                                 <include reference="qMx-z7-HTf"/>
+                                <include reference="7Rs-rI-cWm"/>
+                                <include reference="T0f-4Y-e9X"/>
+                                <include reference="dCQ-H8-wrk"/>
+                                <include reference="hrj-TV-WGp"/>
+                                <include reference="EX1-uh-3gy"/>
+                                <include reference="etS-VI-ZWk"/>
+                                <include reference="bsa-lQ-xjj"/>
+                                <include reference="whT-1M-VSC"/>
+                                <include reference="L6w-8d-fJq"/>
+                                <include reference="VLA-yD-Jah"/>
+                                <include reference="WHW-Xe-erR"/>
+                                <include reference="WMy-JP-7s8"/>
+                                <include reference="eEj-Yi-VjO"/>
+                                <include reference="Gnc-Nk-oyD"/>
+                                <include reference="QRv-JU-gzn"/>
+                                <include reference="6Ey-JN-T0N"/>
+                                <include reference="7Jf-CM-NiJ"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="fifthChoiceLabel" destination="Y3G-vx-EGO" id="3It-Ul-ICR"/>
                         <outlet property="firstChoiceImage" destination="cJh-so-2EL" id="5rA-Eh-3oc"/>
                         <outlet property="firstChoiceLabel" destination="ubA-gr-zxn" id="5fy-89-ko1"/>
-                        <outlet property="otherOptionsLabel" destination="jQK-ZR-kpo" id="SGA-n0-Ec8"/>
+                        <outlet property="fourthChoiceLabel" destination="H5e-Jq-Ss6" id="Ew5-CL-dtg"/>
                         <outlet property="secondChoiceImage" destination="b15-je-2wE" id="3sW-x0-cX3"/>
                         <outlet property="secondChoiceLabel" destination="Lob-or-r0t" id="6bN-3V-63E"/>
+                        <outlet property="thirdChoiceLabel" destination="jQK-ZR-kpo" id="PqG-JD-BJw"/>
                         <segue destination="1un-xU-VQI" kind="unwind" identifier="returnedFromPickResultSegue" unwindAction="returnedFromPickResult:" id="Ysq-Op-26t"/>
                     </connections>
                 </viewController>
@@ -894,7 +934,7 @@
         <!--Hero Search View Controller-->
         <scene sceneID="th4-Pa-iH4">
             <objects>
-                <viewController id="4Xq-GN-DAf" customClass="HeroSearchViewController" customModule="Dota2InTheBag" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4Xq-GN-DAf" customClass="HeroSearchViewController" customModule="Dota2CounterPicks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X2j-u6-jSF"/>
                         <viewControllerLayoutGuide type="bottom" id="IYF-tp-kce"/>
@@ -913,7 +953,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeroTableCell" rowHeight="72" id="RJp-YN-g2M" customClass="HeroTableViewCell" customModule="Dota2InTheBag" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeroTableCell" rowHeight="72" id="RJp-YN-g2M" customClass="HeroTableViewCell" customModule="Dota2CounterPicks" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RJp-YN-g2M" id="lhc-7o-bEy">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>

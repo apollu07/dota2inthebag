@@ -18,28 +18,22 @@ class PickResultViewController: UIViewController {
     @IBOutlet weak var firstChoiceImage: UIImageView!
     @IBOutlet weak var secondChoiceLabel: UILabel!
     @IBOutlet weak var secondChoiceImage: UIImageView!
-    @IBOutlet weak var otherOptionsLabel: UILabel!
+    @IBOutlet weak var thirdChoiceLabel: UILabel!
+    @IBOutlet weak var fourthChoiceLabel: UILabel!
+    @IBOutlet weak var fifthChoiceLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("match level is \(matchLevel?.rawValue)")
         // Do any additional setup after loading the view.
         // Set pick result page lables and images.
-        let firstChoiceID = suggestedHeroes[0]
-        firstChoiceLabel.text = heroDatabase.getHeroNameByID(heroId: firstChoiceID)
-        firstChoiceImage.image = UIImage(named: heroDatabase.getHeroImageByID(heroId: firstChoiceID))
-        let secondChoiceID = suggestedHeroes[1]
-        secondChoiceLabel.text = heroDatabase.getHeroNameByID(heroId: secondChoiceID)
-        secondChoiceImage.image = UIImage(named: heroDatabase.getHeroImageByID(heroId: secondChoiceID))
-        var otherOptions: String = ""
-        for i in 2...9 {
-            let currHeroName = heroDatabase.getHeroNameByID(heroId: suggestedHeroes[i])
-            otherOptions += "\(currHeroName)"
-            if i != 9 {
-                otherOptions += ", "
-            }
-        }
-        otherOptionsLabel.text = otherOptions
+        firstChoiceLabel.text = heroDatabase.getHeroNameByID(heroId: suggestedHeroes[0])
+        firstChoiceImage.image = UIImage(named: heroDatabase.getHeroImageByID(heroId: suggestedHeroes[0]))
+        secondChoiceLabel.text = heroDatabase.getHeroNameByID(heroId: suggestedHeroes[1])
+        secondChoiceImage.image = UIImage(named: heroDatabase.getHeroImageByID(heroId: suggestedHeroes[1]))
+        thirdChoiceLabel.text = heroDatabase.getHeroNameByID(heroId: suggestedHeroes[2])
+        fourthChoiceLabel.text = heroDatabase.getHeroNameByID(heroId: suggestedHeroes[3])
+        fifthChoiceLabel.text = heroDatabase.getHeroNameByID(heroId: suggestedHeroes[4])
     }
 
     override func didReceiveMemoryWarning() {
